@@ -15,6 +15,31 @@
 		15712F172521EBC400C08F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15712F152521EBC400C08F74 /* LaunchScreen.storyboard */; };
 		15712F222521EBC400C08F74 /* PandaTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F212521EBC400C08F74 /* PandaTalkTests.swift */; };
 		15712F2D2521EBC400C08F74 /* PandaTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F2C2521EBC400C08F74 /* PandaTalkUITests.swift */; };
+		15712F472521F67700C08F74 /* UIViewController+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F462521F67700C08F74 /* UIViewController+Protocol.swift */; };
+		15712F542521F69000C08F74 /* ViewModel+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F532521F69000C08F74 /* ViewModel+Protocol.swift */; };
+		15712F592521F6A200C08F74 /* AppModel+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F582521F6A200C08F74 /* AppModel+Protocol.swift */; };
+		15712F5E2521F6B800C08F74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F5D2521F6B800C08F74 /* Constants.swift */; };
+		15712F632521F6C700C08F74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F622521F6C700C08F74 /* LoginViewController.swift */; };
+		15712F682521F6DF00C08F74 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F672521F6DF00C08F74 /* LoginViewModel.swift */; };
+		15712F6D2521F6EB00C08F74 /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F6C2521F6EB00C08F74 /* LoginDataModel.swift */; };
+		15712F722521F70000C08F74 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F712521F70000C08F74 /* FriendListViewController.swift */; };
+		15712F772521F70C00C08F74 /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F762521F70C00C08F74 /* FriendListViewModel.swift */; };
+		15712F7C2521F71500C08F74 /* FriendListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F7B2521F71500C08F74 /* FriendListDataModel.swift */; };
+		15712F812521F72100C08F74 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F802521F72100C08F74 /* ChatListViewController.swift */; };
+		15712F862521F72E00C08F74 /* ChatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F852521F72E00C08F74 /* ChatListViewModel.swift */; };
+		15712F8B2521F73800C08F74 /* ChatListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F8A2521F73800C08F74 /* ChatListDataModel.swift */; };
+		15712F902521F74100C08F74 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F8F2521F74100C08F74 /* SettingViewController.swift */; };
+		15712F952521F74800C08F74 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F942521F74800C08F74 /* SettingViewModel.swift */; };
+		15712F9A2521F75000C08F74 /* SettingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F992521F75000C08F74 /* SettingDataModel.swift */; };
+		15712F9F2521F75F00C08F74 /* Service+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F9E2521F75F00C08F74 /* Service+Protocol.swift */; };
+		15712FA42521F76800C08F74 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FA32521F76800C08F74 /* MainService.swift */; };
+		15712FA92521F77300C08F74 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FA82521F77300C08F74 /* AppModel.swift */; };
+		15712FAE2521F77800C08F74 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FAD2521F77800C08F74 /* AppState.swift */; };
+		15712FB32521F77D00C08F74 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FB22521F77D00C08F74 /* AppError.swift */; };
+		15712FB82521F79700C08F74 /* AppDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FB72521F79700C08F74 /* AppDataModel.swift */; };
+		15712FBE2521F8E000C08F74 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FBD2521F8E000C08F74 /* ChattingViewController.swift */; };
+		15712FC32521F8E700C08F74 /* ChattingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FC22521F8E700C08F74 /* ChattingViewModel.swift */; };
+		15712FC82521F8EE00C08F74 /* ChattingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FC72521F8EE00C08F74 /* ChattingDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +74,31 @@
 		15712F282521EBC400C08F74 /* PandaTalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PandaTalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15712F2C2521EBC400C08F74 /* PandaTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PandaTalkUITests.swift; sourceTree = "<group>"; };
 		15712F2E2521EBC400C08F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15712F462521F67700C08F74 /* UIViewController+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Protocol.swift"; sourceTree = "<group>"; };
+		15712F532521F69000C08F74 /* ViewModel+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel+Protocol.swift"; sourceTree = "<group>"; };
+		15712F582521F6A200C08F74 /* AppModel+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppModel+Protocol.swift"; sourceTree = "<group>"; };
+		15712F5D2521F6B800C08F74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		15712F622521F6C700C08F74 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		15712F672521F6DF00C08F74 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		15712F6C2521F6EB00C08F74 /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
+		15712F712521F70000C08F74 /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		15712F762521F70C00C08F74 /* FriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewModel.swift; sourceTree = "<group>"; };
+		15712F7B2521F71500C08F74 /* FriendListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListDataModel.swift; sourceTree = "<group>"; };
+		15712F802521F72100C08F74 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		15712F852521F72E00C08F74 /* ChatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewModel.swift; sourceTree = "<group>"; };
+		15712F8A2521F73800C08F74 /* ChatListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListDataModel.swift; sourceTree = "<group>"; };
+		15712F8F2521F74100C08F74 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		15712F942521F74800C08F74 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		15712F992521F75000C08F74 /* SettingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDataModel.swift; sourceTree = "<group>"; };
+		15712F9E2521F75F00C08F74 /* Service+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service+Protocol.swift"; sourceTree = "<group>"; };
+		15712FA32521F76800C08F74 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		15712FA82521F77300C08F74 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		15712FAD2521F77800C08F74 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		15712FB22521F77D00C08F74 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		15712FB72521F79700C08F74 /* AppDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataModel.swift; sourceTree = "<group>"; };
+		15712FBD2521F8E000C08F74 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
+		15712FC22521F8E700C08F74 /* ChattingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewModel.swift; sourceTree = "<group>"; };
+		15712FC72521F8EE00C08F74 /* ChattingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +149,16 @@
 		15712F092521EBC300C08F74 /* PandaTalk */ = {
 			isa = PBXGroup;
 			children = (
-				15712F0A2521EBC300C08F74 /* AppDelegate.swift */,
-				15712F0C2521EBC300C08F74 /* SceneDelegate.swift */,
+				15712F452521F61400C08F74 /* Extensions */,
+				15712F442521F60B00C08F74 /* Utility */,
+				15712F432521F5FE00C08F74 /* Support */,
+				15712F3F2521F59800C08F74 /* Login */,
+				15712F422521F5B200C08F74 /* FriendList */,
+				15712F402521F5A400C08F74 /* ChatList */,
+				15712FBC2521F7ED00C08F74 /* Chatting */,
+				15712F412521F5A900C08F74 /* Setting */,
+				15712F3E2521F58500C08F74 /* Services */,
+				15712F3D2521F55C00C08F74 /* Model */,
 				15712F0E2521EBC300C08F74 /* ViewController.swift */,
 				15712F102521EBC300C08F74 /* Main.storyboard */,
 				15712F132521EBC400C08F74 /* Assets.xcassets */,
@@ -126,6 +184,103 @@
 				15712F2E2521EBC400C08F74 /* Info.plist */,
 			);
 			path = PandaTalkUITests;
+			sourceTree = "<group>";
+		};
+		15712F3D2521F55C00C08F74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15712FA82521F77300C08F74 /* AppModel.swift */,
+				15712FAD2521F77800C08F74 /* AppState.swift */,
+				15712FB22521F77D00C08F74 /* AppError.swift */,
+				15712FB72521F79700C08F74 /* AppDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15712F3E2521F58500C08F74 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				15712FA32521F76800C08F74 /* MainService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		15712F3F2521F59800C08F74 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				15712F622521F6C700C08F74 /* LoginViewController.swift */,
+				15712F672521F6DF00C08F74 /* LoginViewModel.swift */,
+				15712F6C2521F6EB00C08F74 /* LoginDataModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		15712F402521F5A400C08F74 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				15712F802521F72100C08F74 /* ChatListViewController.swift */,
+				15712F852521F72E00C08F74 /* ChatListViewModel.swift */,
+				15712F8A2521F73800C08F74 /* ChatListDataModel.swift */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		15712F412521F5A900C08F74 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				15712F8F2521F74100C08F74 /* SettingViewController.swift */,
+				15712F942521F74800C08F74 /* SettingViewModel.swift */,
+				15712F992521F75000C08F74 /* SettingDataModel.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		15712F422521F5B200C08F74 /* FriendList */ = {
+			isa = PBXGroup;
+			children = (
+				15712F712521F70000C08F74 /* FriendListViewController.swift */,
+				15712F762521F70C00C08F74 /* FriendListViewModel.swift */,
+				15712F7B2521F71500C08F74 /* FriendListDataModel.swift */,
+			);
+			path = FriendList;
+			sourceTree = "<group>";
+		};
+		15712F432521F5FE00C08F74 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				15712F0A2521EBC300C08F74 /* AppDelegate.swift */,
+				15712F0C2521EBC300C08F74 /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		15712F442521F60B00C08F74 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				15712F5D2521F6B800C08F74 /* Constants.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		15712F452521F61400C08F74 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				15712F462521F67700C08F74 /* UIViewController+Protocol.swift */,
+				15712F532521F69000C08F74 /* ViewModel+Protocol.swift */,
+				15712F582521F6A200C08F74 /* AppModel+Protocol.swift */,
+				15712F9E2521F75F00C08F74 /* Service+Protocol.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		15712FBC2521F7ED00C08F74 /* Chatting */ = {
+			isa = PBXGroup;
+			children = (
+				15712FBD2521F8E000C08F74 /* ChattingViewController.swift */,
+				15712FC22521F8E700C08F74 /* ChattingViewModel.swift */,
+				15712FC72521F8EE00C08F74 /* ChattingDataModel.swift */,
+			);
+			path = Chatting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +413,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15712F722521F70000C08F74 /* FriendListViewController.swift in Sources */,
+				15712F472521F67700C08F74 /* UIViewController+Protocol.swift in Sources */,
 				15712F0F2521EBC300C08F74 /* ViewController.swift in Sources */,
+				15712FC32521F8E700C08F74 /* ChattingViewModel.swift in Sources */,
+				15712F9F2521F75F00C08F74 /* Service+Protocol.swift in Sources */,
 				15712F0B2521EBC300C08F74 /* AppDelegate.swift in Sources */,
+				15712F812521F72100C08F74 /* ChatListViewController.swift in Sources */,
+				15712F902521F74100C08F74 /* SettingViewController.swift in Sources */,
+				15712F7C2521F71500C08F74 /* FriendListDataModel.swift in Sources */,
+				15712FBE2521F8E000C08F74 /* ChattingViewController.swift in Sources */,
+				15712F952521F74800C08F74 /* SettingViewModel.swift in Sources */,
+				15712F592521F6A200C08F74 /* AppModel+Protocol.swift in Sources */,
+				15712F632521F6C700C08F74 /* LoginViewController.swift in Sources */,
+				15712F5E2521F6B800C08F74 /* Constants.swift in Sources */,
+				15712F9A2521F75000C08F74 /* SettingDataModel.swift in Sources */,
+				15712FA92521F77300C08F74 /* AppModel.swift in Sources */,
+				15712FB82521F79700C08F74 /* AppDataModel.swift in Sources */,
+				15712F8B2521F73800C08F74 /* ChatListDataModel.swift in Sources */,
+				15712FA42521F76800C08F74 /* MainService.swift in Sources */,
+				15712FC82521F8EE00C08F74 /* ChattingDataModel.swift in Sources */,
+				15712F542521F69000C08F74 /* ViewModel+Protocol.swift in Sources */,
+				15712FAE2521F77800C08F74 /* AppState.swift in Sources */,
+				15712F772521F70C00C08F74 /* FriendListViewModel.swift in Sources */,
 				15712F0D2521EBC300C08F74 /* SceneDelegate.swift in Sources */,
+				15712FB32521F77D00C08F74 /* AppError.swift in Sources */,
+				15712F862521F72E00C08F74 /* ChatListViewModel.swift in Sources */,
+				15712F682521F6DF00C08F74 /* LoginViewModel.swift in Sources */,
+				15712F6D2521F6EB00C08F74 /* LoginDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
