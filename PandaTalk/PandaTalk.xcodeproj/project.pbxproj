@@ -36,10 +36,13 @@
 		15712FA92521F77300C08F74 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FA82521F77300C08F74 /* AppModel.swift */; };
 		15712FAE2521F77800C08F74 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FAD2521F77800C08F74 /* AppState.swift */; };
 		15712FB32521F77D00C08F74 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FB22521F77D00C08F74 /* AppError.swift */; };
-		15712FB82521F79700C08F74 /* AppDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FB72521F79700C08F74 /* AppDataModel.swift */; };
+		15712FB82521F79700C08F74 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FB72521F79700C08F74 /* DataModel.swift */; };
 		15712FBE2521F8E000C08F74 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FBD2521F8E000C08F74 /* ChattingViewController.swift */; };
 		15712FC32521F8E700C08F74 /* ChattingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FC22521F8E700C08F74 /* ChattingViewModel.swift */; };
 		15712FC82521F8EE00C08F74 /* ChattingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FC72521F8EE00C08F74 /* ChattingDataModel.swift */; };
+		29B108A411BAA28171E4CAFE /* Pods_PandaTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B581A096D0E7795099474516 /* Pods_PandaTalk.framework */; };
+		4A9531AF61E7B61CCDEF27D9 /* Pods_PandaTalkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D7F4A47BF9826056989650 /* Pods_PandaTalkTests.framework */; };
+		EA1D7482572D7570D4B788F9 /* Pods_PandaTalk_PandaTalkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9860122BBECFB202AA856B4 /* Pods_PandaTalk_PandaTalkUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,10 +98,19 @@
 		15712FA82521F77300C08F74 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		15712FAD2521F77800C08F74 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		15712FB22521F77D00C08F74 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-		15712FB72521F79700C08F74 /* AppDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataModel.swift; sourceTree = "<group>"; };
+		15712FB72521F79700C08F74 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		15712FBD2521F8E000C08F74 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		15712FC22521F8E700C08F74 /* ChattingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewModel.swift; sourceTree = "<group>"; };
 		15712FC72521F8EE00C08F74 /* ChattingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingDataModel.swift; sourceTree = "<group>"; };
+		48DF18596E482DC8D9EDEB54 /* Pods-PandaTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTalk.release.xcconfig"; path = "Target Support Files/Pods-PandaTalk/Pods-PandaTalk.release.xcconfig"; sourceTree = "<group>"; };
+		62D7F4A47BF9826056989650 /* Pods_PandaTalkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PandaTalkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		783DE4C0ADE99CAA60177075 /* Pods-PandaTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTalk.debug.xcconfig"; path = "Target Support Files/Pods-PandaTalk/Pods-PandaTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		A08D37017FB72C80BB455059 /* Pods-PandaTalkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTalkTests.release.xcconfig"; path = "Target Support Files/Pods-PandaTalkTests/Pods-PandaTalkTests.release.xcconfig"; sourceTree = "<group>"; };
+		A9860122BBECFB202AA856B4 /* Pods_PandaTalk_PandaTalkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PandaTalk_PandaTalkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B581A096D0E7795099474516 /* Pods_PandaTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PandaTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D93E845A5D6CE71B406734DF /* Pods-PandaTalkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTalkTests.debug.xcconfig"; path = "Target Support Files/Pods-PandaTalkTests/Pods-PandaTalkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F37A4CF395EED61697505F21 /* Pods-PandaTalk-PandaTalkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTalk-PandaTalkUITests.release.xcconfig"; path = "Target Support Files/Pods-PandaTalk-PandaTalkUITests/Pods-PandaTalk-PandaTalkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FD95E5E5D335AF1FE4FECC3B /* Pods-PandaTalk-PandaTalkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTalk-PandaTalkUITests.debug.xcconfig"; path = "Target Support Files/Pods-PandaTalk-PandaTalkUITests/Pods-PandaTalk-PandaTalkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B108A411BAA28171E4CAFE /* Pods_PandaTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A9531AF61E7B61CCDEF27D9 /* Pods_PandaTalkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,12 +134,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA1D7482572D7570D4B788F9 /* Pods_PandaTalk_PandaTalkUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09F0C74A7DAFAB2597174A1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B581A096D0E7795099474516 /* Pods_PandaTalk.framework */,
+				A9860122BBECFB202AA856B4 /* Pods_PandaTalk_PandaTalkUITests.framework */,
+				62D7F4A47BF9826056989650 /* Pods_PandaTalkTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		15712EFE2521EBC300C08F74 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +158,8 @@
 				15712F202521EBC400C08F74 /* PandaTalkTests */,
 				15712F2B2521EBC400C08F74 /* PandaTalkUITests */,
 				15712F082521EBC300C08F74 /* Products */,
+				F536D83C798935E8CE9987EB /* Pods */,
+				09F0C74A7DAFAB2597174A1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,13 +179,13 @@
 				15712F452521F61400C08F74 /* Extensions */,
 				15712F442521F60B00C08F74 /* Utility */,
 				15712F432521F5FE00C08F74 /* Support */,
+				15712F3E2521F58500C08F74 /* Services */,
+				15712F3D2521F55C00C08F74 /* SharedModel */,
 				15712F3F2521F59800C08F74 /* Login */,
 				15712F422521F5B200C08F74 /* FriendList */,
 				15712F402521F5A400C08F74 /* ChatList */,
 				15712FBC2521F7ED00C08F74 /* Chatting */,
 				15712F412521F5A900C08F74 /* Setting */,
-				15712F3E2521F58500C08F74 /* Services */,
-				15712F3D2521F55C00C08F74 /* Model */,
 				15712F0E2521EBC300C08F74 /* ViewController.swift */,
 				15712F102521EBC300C08F74 /* Main.storyboard */,
 				15712F132521EBC400C08F74 /* Assets.xcassets */,
@@ -186,15 +213,13 @@
 			path = PandaTalkUITests;
 			sourceTree = "<group>";
 		};
-		15712F3D2521F55C00C08F74 /* Model */ = {
+		15712F3D2521F55C00C08F74 /* SharedModel */ = {
 			isa = PBXGroup;
 			children = (
-				15712FA82521F77300C08F74 /* AppModel.swift */,
-				15712FAD2521F77800C08F74 /* AppState.swift */,
-				15712FB22521F77D00C08F74 /* AppError.swift */,
-				15712FB72521F79700C08F74 /* AppDataModel.swift */,
+				15712FE12521FB1C00C08F74 /* DataModel */,
+				15712FE02521FB1700C08F74 /* AppModel */,
 			);
-			path = Model;
+			path = SharedModel;
 			sourceTree = "<group>";
 		};
 		15712F3E2521F58500C08F74 /* Services */ = {
@@ -208,9 +233,9 @@
 		15712F3F2521F59800C08F74 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				15712F622521F6C700C08F74 /* LoginViewController.swift */,
-				15712F672521F6DF00C08F74 /* LoginViewModel.swift */,
-				15712F6C2521F6EB00C08F74 /* LoginDataModel.swift */,
+				15712FCE2521FA4700C08F74 /* View */,
+				15712FCD2521FA4200C08F74 /* ViewModel */,
+				15712FCC2521FA3E00C08F74 /* Model */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -218,9 +243,9 @@
 		15712F402521F5A400C08F74 /* ChatList */ = {
 			isa = PBXGroup;
 			children = (
-				15712F802521F72100C08F74 /* ChatListViewController.swift */,
-				15712F852521F72E00C08F74 /* ChatListViewModel.swift */,
-				15712F8A2521F73800C08F74 /* ChatListDataModel.swift */,
+				15712FD42521FA6D00C08F74 /* View */,
+				15712FD32521FA6800C08F74 /* ViewModel */,
+				15712FD22521FA6300C08F74 /* Model */,
 			);
 			path = ChatList;
 			sourceTree = "<group>";
@@ -228,9 +253,9 @@
 		15712F412521F5A900C08F74 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				15712F8F2521F74100C08F74 /* SettingViewController.swift */,
-				15712F942521F74800C08F74 /* SettingViewModel.swift */,
-				15712F992521F75000C08F74 /* SettingDataModel.swift */,
+				15712FDA2521FA9000C08F74 /* View */,
+				15712FD92521FA8500C08F74 /* ViewModel */,
+				15712FD82521FA8100C08F74 /* Model */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -238,9 +263,9 @@
 		15712F422521F5B200C08F74 /* FriendList */ = {
 			isa = PBXGroup;
 			children = (
-				15712F712521F70000C08F74 /* FriendListViewController.swift */,
-				15712F762521F70C00C08F74 /* FriendListViewModel.swift */,
-				15712F7B2521F71500C08F74 /* FriendListDataModel.swift */,
+				15712FD12521FA5F00C08F74 /* View */,
+				15712FD02521FA5A00C08F74 /* ViewModel */,
+				15712FCF2521FA5400C08F74 /* Model */,
 			);
 			path = FriendList;
 			sourceTree = "<group>";
@@ -276,11 +301,219 @@
 		15712FBC2521F7ED00C08F74 /* Chatting */ = {
 			isa = PBXGroup;
 			children = (
-				15712FBD2521F8E000C08F74 /* ChattingViewController.swift */,
-				15712FC22521F8E700C08F74 /* ChattingViewModel.swift */,
-				15712FC72521F8EE00C08F74 /* ChattingDataModel.swift */,
+				15712FD72521FA7D00C08F74 /* View */,
+				15712FD62521FA7600C08F74 /* ViewModel */,
+				15712FD52521FA7200C08F74 /* Model */,
 			);
 			path = Chatting;
+			sourceTree = "<group>";
+		};
+		15712FCC2521FA3E00C08F74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15712F6C2521F6EB00C08F74 /* LoginDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15712FCD2521FA4200C08F74 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				15712F672521F6DF00C08F74 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		15712FCE2521FA4700C08F74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15712FDB2521FABA00C08F74 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15712FCF2521FA5400C08F74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15712F7B2521F71500C08F74 /* FriendListDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15712FD02521FA5A00C08F74 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				15712F762521F70C00C08F74 /* FriendListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		15712FD12521FA5F00C08F74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15712FDC2521FAC400C08F74 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15712FD22521FA6300C08F74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15712F8A2521F73800C08F74 /* ChatListDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15712FD32521FA6800C08F74 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				15712F852521F72E00C08F74 /* ChatListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		15712FD42521FA6D00C08F74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15712FDD2521FACE00C08F74 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15712FD52521FA7200C08F74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15712FC72521F8EE00C08F74 /* ChattingDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15712FD62521FA7600C08F74 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				15712FC22521F8E700C08F74 /* ChattingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		15712FD72521FA7D00C08F74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15712FDE2521FAD500C08F74 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15712FD82521FA8100C08F74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15712F992521F75000C08F74 /* SettingDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15712FD92521FA8500C08F74 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				15712F942521F74800C08F74 /* SettingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		15712FDA2521FA9000C08F74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15712FDF2521FAE400C08F74 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15712FDB2521FABA00C08F74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				15712F622521F6C700C08F74 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		15712FDC2521FAC400C08F74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				15712F712521F70000C08F74 /* FriendListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		15712FDD2521FACE00C08F74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				15712F802521F72100C08F74 /* ChatListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		15712FDE2521FAD500C08F74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				15712FBD2521F8E000C08F74 /* ChattingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		15712FDF2521FAE400C08F74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				15712F8F2521F74100C08F74 /* SettingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		15712FE02521FB1700C08F74 /* AppModel */ = {
+			isa = PBXGroup;
+			children = (
+				15712FA82521F77300C08F74 /* AppModel.swift */,
+				15712FE62521FB3200C08F74 /* Error */,
+				15712FE52521FB2E00C08F74 /* State */,
+			);
+			path = AppModel;
+			sourceTree = "<group>";
+		};
+		15712FE12521FB1C00C08F74 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				15712FB72521F79700C08F74 /* DataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		15712FE52521FB2E00C08F74 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				15712FAD2521F77800C08F74 /* AppState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		15712FE62521FB3200C08F74 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				15712FB22521F77D00C08F74 /* AppError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		F536D83C798935E8CE9987EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				783DE4C0ADE99CAA60177075 /* Pods-PandaTalk.debug.xcconfig */,
+				48DF18596E482DC8D9EDEB54 /* Pods-PandaTalk.release.xcconfig */,
+				FD95E5E5D335AF1FE4FECC3B /* Pods-PandaTalk-PandaTalkUITests.debug.xcconfig */,
+				F37A4CF395EED61697505F21 /* Pods-PandaTalk-PandaTalkUITests.release.xcconfig */,
+				D93E845A5D6CE71B406734DF /* Pods-PandaTalkTests.debug.xcconfig */,
+				A08D37017FB72C80BB455059 /* Pods-PandaTalkTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,9 +523,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15712F312521EBC400C08F74 /* Build configuration list for PBXNativeTarget "PandaTalk" */;
 			buildPhases = (
+				E4D17A87FD2B54DBFE807008 /* [CP] Check Pods Manifest.lock */,
 				15712F032521EBC300C08F74 /* Sources */,
 				15712F042521EBC300C08F74 /* Frameworks */,
 				15712F052521EBC300C08F74 /* Resources */,
+				11A7D2849F2C5A986AF9856A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -307,6 +542,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15712F342521EBC400C08F74 /* Build configuration list for PBXNativeTarget "PandaTalkTests" */;
 			buildPhases = (
+				C93833345DEA7174A452D07E /* [CP] Check Pods Manifest.lock */,
 				15712F192521EBC400C08F74 /* Sources */,
 				15712F1A2521EBC400C08F74 /* Frameworks */,
 				15712F1B2521EBC400C08F74 /* Resources */,
@@ -325,9 +561,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15712F372521EBC400C08F74 /* Build configuration list for PBXNativeTarget "PandaTalkUITests" */;
 			buildPhases = (
+				031713E3321F0CADA49351C7 /* [CP] Check Pods Manifest.lock */,
 				15712F242521EBC400C08F74 /* Sources */,
 				15712F252521EBC400C08F74 /* Frameworks */,
 				15712F262521EBC400C08F74 /* Resources */,
+				34050D9D575F1E3845DAFE13 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -408,6 +646,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		031713E3321F0CADA49351C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PandaTalk-PandaTalkUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11A7D2849F2C5A986AF9856A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PandaTalk/Pods-PandaTalk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PandaTalk/Pods-PandaTalk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PandaTalk/Pods-PandaTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34050D9D575F1E3845DAFE13 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PandaTalk-PandaTalkUITests/Pods-PandaTalk-PandaTalkUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PandaTalk-PandaTalkUITests/Pods-PandaTalk-PandaTalkUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PandaTalk-PandaTalkUITests/Pods-PandaTalk-PandaTalkUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C93833345DEA7174A452D07E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PandaTalkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4D17A87FD2B54DBFE807008 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PandaTalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		15712F032521EBC300C08F74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -429,7 +770,7 @@
 				15712F5E2521F6B800C08F74 /* Constants.swift in Sources */,
 				15712F9A2521F75000C08F74 /* SettingDataModel.swift in Sources */,
 				15712FA92521F77300C08F74 /* AppModel.swift in Sources */,
-				15712FB82521F79700C08F74 /* AppDataModel.swift in Sources */,
+				15712FB82521F79700C08F74 /* DataModel.swift in Sources */,
 				15712F8B2521F73800C08F74 /* ChatListDataModel.swift in Sources */,
 				15712FA42521F76800C08F74 /* MainService.swift in Sources */,
 				15712FC82521F8EE00C08F74 /* ChattingDataModel.swift in Sources */,
@@ -613,6 +954,7 @@
 		};
 		15712F322521EBC400C08F74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 783DE4C0ADE99CAA60177075 /* Pods-PandaTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -632,6 +974,7 @@
 		};
 		15712F332521EBC400C08F74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48DF18596E482DC8D9EDEB54 /* Pods-PandaTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -651,6 +994,7 @@
 		};
 		15712F352521EBC400C08F74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D93E845A5D6CE71B406734DF /* Pods-PandaTalkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -673,6 +1017,7 @@
 		};
 		15712F362521EBC400C08F74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A08D37017FB72C80BB455059 /* Pods-PandaTalkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -695,6 +1040,7 @@
 		};
 		15712F382521EBC400C08F74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD95E5E5D335AF1FE4FECC3B /* Pods-PandaTalk-PandaTalkUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -715,6 +1061,7 @@
 		};
 		15712F392521EBC400C08F74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F37A4CF395EED61697505F21 /* Pods-PandaTalk-PandaTalkUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

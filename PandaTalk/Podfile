@@ -1,0 +1,43 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'PandaTalk' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for PandaTalk
+
+  # For Syntax sugar
+  pod 'Then'
+
+  # For AutoLayout
+  pod 'SnapKit'
+
+  # For RxCommunity
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxFlow'
+  pod 'RxOptional'
+  pod 'RxController'
+  pod 'RxDataSources', '~> 4.0'
+  pod 'RxBinding'
+
+  # For Debug
+  pod 'FLEX', :configurations => ['Debug']
+  pod 'Gedatsu', configuration: %w(Debug)
+
+  # For Firebase
+
+  # For SkeletonView
+  pod "SkeletonView"
+
+  target 'PandaTalkTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'PandaTalkUITests' do
+    # Pods for testing
+  end
+
+end
