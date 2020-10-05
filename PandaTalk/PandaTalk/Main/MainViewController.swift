@@ -8,14 +8,14 @@
 import RxSwift
 
 enum MainTabType: Int {
-  case friendList = 0
+  case friendsList = 0
   case chatList = 1
   case setting = 2
   
   var tabTitle: String? {
     switch self {
-    case .friendList:
-      return "Friends"
+    case .friendsList:
+      return "Friends List"
     case .chatList:
       return "Chats"
     case .setting:
@@ -25,8 +25,8 @@ enum MainTabType: Int {
   
   var navigationTitle: String? {
     switch self {
-    case .friendList:
-      return "Friend List"
+    case .friendsList:
+      return "Friends List"
     case .chatList:
       return "Chat List"
     case .setting:
@@ -58,7 +58,7 @@ class MainViewController: UITabBarController {
         let type = MainTabType(rawValue: index)
         viewController.tabBarItem = UITabBarItem(title: type?.tabTitle, image: nil, tag: index)
       }
-      updateNavigationBar(with: .friendList)
+      updateNavigationBar(with: .friendsList)
     }
   }
   

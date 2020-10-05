@@ -27,6 +27,12 @@ target 'PandaTalk' do
   pod 'Gedatsu', configuration: %w(Debug)
 
   # For Firebase
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Core'
+  pod 'FirebaseUI'
+  pod 'GoogleSignIn'
 
   # For SkeletonView
   pod "SkeletonView"

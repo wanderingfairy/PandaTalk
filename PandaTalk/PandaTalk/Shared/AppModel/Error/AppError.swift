@@ -6,3 +6,9 @@
 //
 
 import Foundation
+ 
+enum AppError: Error {
+  case generalError
+  case uidIsNil
+  case currentUIDReadingIsFail
+}

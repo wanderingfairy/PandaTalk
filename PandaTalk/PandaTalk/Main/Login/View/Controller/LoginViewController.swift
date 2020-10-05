@@ -8,10 +8,10 @@
 import UIKit
 
 class LoginViewController: BaseViewController<LoginViewModel> {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    title = "Login"
+  }
+  
 }

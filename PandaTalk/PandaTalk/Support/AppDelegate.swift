@@ -8,6 +8,8 @@
 import SnapKit
 import RxSwift
 import RxFlow
+import Firebase
+
 @_exported import RxBinding
 
 @UIApplicationMain
@@ -16,15 +18,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private let coordinator = FlowCoordinator()
   private let disposeBag = DisposeBag()
   private let window = UIWindow()
+  private let appModelInstance = AppModel.instance
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    FirebaseApp.configure()
+    
     coordinator.rx.didNavigate.subscribe(onNext: {
         print("did navigate to \($0) -> \($1)")
     }).disposed(by: disposeBag)
     
     //Login 분기 처리 필요
-    coordinate {
-      (AppFlow(window: $0), AppStep.main)
+    appModelInstance.userModel.readCurrentUID { [unowned self] result in
+      switch result {
+      case .success(let _):
+        self.coordinate {
+          (AppFlow(window: $0), AppStep.main)
+        }
+      case .failure(let _):
+        self.coordinate {
+          (AppFlow(window: $0), AppStep.login)
+        }
+      }
     }
     return true
   }

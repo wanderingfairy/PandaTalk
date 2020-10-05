@@ -13,10 +13,12 @@
 		15192D58252B6B9200199B7B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D57252B6B9200199B7B /* MainViewController.swift */; };
 		15192D60252B6BC300199B7B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D5F252B6BC300199B7B /* MainViewModel.swift */; };
 		15192D65252B6BD500199B7B /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D64252B6BD500199B7B /* MainFlow.swift */; };
-		15192D6A252B72FF00199B7B /* FriendFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D69252B72FF00199B7B /* FriendFlow.swift */; };
+		15192D6A252B72FF00199B7B /* FriendsListFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D69252B72FF00199B7B /* FriendsListFlow.swift */; };
 		15192D6F252B741900199B7B /* ChatListFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D6E252B741900199B7B /* ChatListFlow.swift */; };
 		15192D74252B748100199B7B /* SettingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D73252B748100199B7B /* SettingFlow.swift */; };
 		15192D79252B768400199B7B /* LoginFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D78252B768400199B7B /* LoginFlow.swift */; };
+		15192D8D252B84BF00199B7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15192D8C252B84BF00199B7B /* GoogleService-Info.plist */; };
+		15192DEC252B8B3600199B7B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192DEB252B8B3600199B7B /* UserModel.swift */; };
 		15712F0B2521EBC300C08F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F0A2521EBC300C08F74 /* AppDelegate.swift */; };
 		15712F142521EBC400C08F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15712F132521EBC400C08F74 /* Assets.xcassets */; };
 		15712F172521EBC400C08F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15712F152521EBC400C08F74 /* LaunchScreen.storyboard */; };
@@ -27,8 +29,8 @@
 		15712F632521F6C700C08F74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F622521F6C700C08F74 /* LoginViewController.swift */; };
 		15712F682521F6DF00C08F74 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F672521F6DF00C08F74 /* LoginViewModel.swift */; };
 		15712F6D2521F6EB00C08F74 /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F6C2521F6EB00C08F74 /* LoginDataModel.swift */; };
-		15712F722521F70000C08F74 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F712521F70000C08F74 /* FriendListViewController.swift */; };
-		15712F772521F70C00C08F74 /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F762521F70C00C08F74 /* FriendListViewModel.swift */; };
+		15712F722521F70000C08F74 /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F712521F70000C08F74 /* FriendsListViewController.swift */; };
+		15712F772521F70C00C08F74 /* FriendsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F762521F70C00C08F74 /* FriendsListViewModel.swift */; };
 		15712F7C2521F71500C08F74 /* FriendListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F7B2521F71500C08F74 /* FriendListDataModel.swift */; };
 		15712F812521F72100C08F74 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F802521F72100C08F74 /* ChatListViewController.swift */; };
 		15712F862521F72E00C08F74 /* ChatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F852521F72E00C08F74 /* ChatListViewModel.swift */; };
@@ -74,10 +76,12 @@
 		15192D57252B6B9200199B7B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		15192D5F252B6BC300199B7B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		15192D64252B6BD500199B7B /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
-		15192D69252B72FF00199B7B /* FriendFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFlow.swift; sourceTree = "<group>"; };
+		15192D69252B72FF00199B7B /* FriendsListFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListFlow.swift; sourceTree = "<group>"; };
 		15192D6E252B741900199B7B /* ChatListFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListFlow.swift; sourceTree = "<group>"; };
 		15192D73252B748100199B7B /* SettingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFlow.swift; sourceTree = "<group>"; };
 		15192D78252B768400199B7B /* LoginFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlow.swift; sourceTree = "<group>"; };
+		15192D8C252B84BF00199B7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		15192DEB252B8B3600199B7B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		15712F072521EBC300C08F74 /* PandaTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandaTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15712F0A2521EBC300C08F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15712F132521EBC400C08F74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,8 +98,8 @@
 		15712F622521F6C700C08F74 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		15712F672521F6DF00C08F74 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		15712F6C2521F6EB00C08F74 /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
-		15712F712521F70000C08F74 /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
-		15712F762521F70C00C08F74 /* FriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewModel.swift; sourceTree = "<group>"; };
+		15712F712521F70000C08F74 /* FriendsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
+		15712F762521F70C00C08F74 /* FriendsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListViewModel.swift; sourceTree = "<group>"; };
 		15712F7B2521F71500C08F74 /* FriendListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListDataModel.swift; sourceTree = "<group>"; };
 		15712F802521F72100C08F74 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		15712F852521F72E00C08F74 /* ChatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewModel.swift; sourceTree = "<group>"; };
@@ -166,7 +170,7 @@
 			children = (
 				15192D51252B447700199B7B /* AppFlow.swift */,
 				15192D64252B6BD500199B7B /* MainFlow.swift */,
-				15192D69252B72FF00199B7B /* FriendFlow.swift */,
+				15192D69252B72FF00199B7B /* FriendsListFlow.swift */,
 				15192D6E252B741900199B7B /* ChatListFlow.swift */,
 				15192D73252B748100199B7B /* SettingFlow.swift */,
 				15192D78252B768400199B7B /* LoginFlow.swift */,
@@ -178,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				15712F3F2521F59800C08F74 /* Login */,
-				15712F422521F5B200C08F74 /* FriendList */,
+				15712F422521F5B200C08F74 /* FriendsList */,
 				15712F402521F5A400C08F74 /* ChatList */,
 				15712FBC2521F7ED00C08F74 /* Chatting */,
 				15712F412521F5A900C08F74 /* Setting */,
@@ -218,11 +222,11 @@
 				15712F452521F61400C08F74 /* Extensions */,
 				15712F442521F60B00C08F74 /* Utility */,
 				15712F432521F5FE00C08F74 /* Support */,
-				15712F3E2521F58500C08F74 /* Services */,
-				15712F3D2521F55C00C08F74 /* SharedModel */,
+				15712F3D2521F55C00C08F74 /* Shared */,
 				15712F132521EBC400C08F74 /* Assets.xcassets */,
 				15712F152521EBC400C08F74 /* LaunchScreen.storyboard */,
 				15712F182521EBC400C08F74 /* Info.plist */,
+				15192D8C252B84BF00199B7B /* GoogleService-Info.plist */,
 			);
 			path = PandaTalk;
 			sourceTree = "<group>";
@@ -245,21 +249,22 @@
 			path = PandaTalkUITests;
 			sourceTree = "<group>";
 		};
-		15712F3D2521F55C00C08F74 /* SharedModel */ = {
+		15712F3D2521F55C00C08F74 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				15712FE12521FB1C00C08F74 /* DataModel */,
 				15712FE02521FB1700C08F74 /* AppModel */,
+				15712FE12521FB1C00C08F74 /* DataModel */,
+				15712F3E2521F58500C08F74 /* Managers */,
 			);
-			path = SharedModel;
+			path = Shared;
 			sourceTree = "<group>";
 		};
-		15712F3E2521F58500C08F74 /* Services */ = {
+		15712F3E2521F58500C08F74 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				15712FA32521F76800C08F74 /* APIManager.swift */,
 			);
-			path = Services;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		15712F3F2521F59800C08F74 /* Login */ = {
@@ -292,14 +297,14 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
-		15712F422521F5B200C08F74 /* FriendList */ = {
+		15712F422521F5B200C08F74 /* FriendsList */ = {
 			isa = PBXGroup;
 			children = (
 				15712FD12521FA5F00C08F74 /* View */,
 				15712FD02521FA5A00C08F74 /* ViewModel */,
 				15712FCF2521FA5400C08F74 /* Model */,
 			);
-			path = FriendList;
+			path = FriendsList;
 			sourceTree = "<group>";
 		};
 		15712F432521F5FE00C08F74 /* Support */ = {
@@ -374,7 +379,7 @@
 		15712FD02521FA5A00C08F74 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				15712F762521F70C00C08F74 /* FriendListViewModel.swift */,
+				15712F762521F70C00C08F74 /* FriendsListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -470,7 +475,7 @@
 		15712FDC2521FAC400C08F74 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				15712F712521F70000C08F74 /* FriendListViewController.swift */,
+				15712F712521F70000C08F74 /* FriendsListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -513,6 +518,7 @@
 			isa = PBXGroup;
 			children = (
 				15712FB72521F79700C08F74 /* DataModel.swift */,
+				15192DEB252B8B3600199B7B /* UserModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -558,6 +564,7 @@
 				15712F042521EBC300C08F74 /* Frameworks */,
 				15712F052521EBC300C08F74 /* Resources */,
 				11A7D2849F2C5A986AF9856A /* [CP] Embed Pods Frameworks */,
+				42362E5BC7F8D6F114EE5D5B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -596,6 +603,7 @@
 				15712F252521EBC400C08F74 /* Frameworks */,
 				15712F262521EBC400C08F74 /* Resources */,
 				34050D9D575F1E3845DAFE13 /* [CP] Embed Pods Frameworks */,
+				3EEFF9BE5D3A4F7CCA622BFA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -655,6 +663,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15712F172521EBC400C08F74 /* LaunchScreen.storyboard in Resources */,
+				15192D8D252B84BF00199B7B /* GoogleService-Info.plist in Resources */,
 				15712F142521EBC400C08F74 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -732,6 +741,40 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PandaTalk-PandaTalkUITests/Pods-PandaTalk-PandaTalkUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3EEFF9BE5D3A4F7CCA622BFA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PandaTalk-PandaTalkUITests/Pods-PandaTalk-PandaTalkUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PandaTalk-PandaTalkUITests/Pods-PandaTalk-PandaTalkUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PandaTalk-PandaTalkUITests/Pods-PandaTalk-PandaTalkUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42362E5BC7F8D6F114EE5D5B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PandaTalk/Pods-PandaTalk-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PandaTalk/Pods-PandaTalk-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PandaTalk/Pods-PandaTalk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C93833345DEA7174A452D07E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -783,7 +826,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15712F722521F70000C08F74 /* FriendListViewController.swift in Sources */,
+				15712F722521F70000C08F74 /* FriendsListViewController.swift in Sources */,
 				15192D6F252B741900199B7B /* ChatListFlow.swift in Sources */,
 				15712FC32521F8E700C08F74 /* ChattingViewModel.swift in Sources */,
 				15192D74252B748100199B7B /* SettingFlow.swift in Sources */,
@@ -791,6 +834,7 @@
 				15712F9F2521F75F00C08F74 /* Service+Protocol.swift in Sources */,
 				15712F0B2521EBC300C08F74 /* AppDelegate.swift in Sources */,
 				15712F812521F72100C08F74 /* ChatListViewController.swift in Sources */,
+				15192DEC252B8B3600199B7B /* UserModel.swift in Sources */,
 				15712F902521F74100C08F74 /* SettingViewController.swift in Sources */,
 				15712F7C2521F71500C08F74 /* FriendListDataModel.swift in Sources */,
 				15192D58252B6B9200199B7B /* MainViewController.swift in Sources */,
@@ -803,7 +847,7 @@
 				15712F632521F6C700C08F74 /* LoginViewController.swift in Sources */,
 				15712F5E2521F6B800C08F74 /* Constants.swift in Sources */,
 				15712F9A2521F75000C08F74 /* SettingDataModel.swift in Sources */,
-				15192D6A252B72FF00199B7B /* FriendFlow.swift in Sources */,
+				15192D6A252B72FF00199B7B /* FriendsListFlow.swift in Sources */,
 				15712FA92521F77300C08F74 /* AppModel.swift in Sources */,
 				15712FB82521F79700C08F74 /* DataModel.swift in Sources */,
 				15712F8B2521F73800C08F74 /* ChatListDataModel.swift in Sources */,
@@ -811,7 +855,7 @@
 				15712FC82521F8EE00C08F74 /* ChattingDataModel.swift in Sources */,
 				15192D52252B447700199B7B /* AppFlow.swift in Sources */,
 				15712FAE2521F77800C08F74 /* AppState.swift in Sources */,
-				15712F772521F70C00C08F74 /* FriendListViewModel.swift in Sources */,
+				15712F772521F70C00C08F74 /* FriendsListViewModel.swift in Sources */,
 				15192D48252B441500199B7B /* BaseViewController.swift in Sources */,
 				15712FB32521F77D00C08F74 /* AppError.swift in Sources */,
 				15712F862521F72E00C08F74 /* ChatListViewModel.swift in Sources */,

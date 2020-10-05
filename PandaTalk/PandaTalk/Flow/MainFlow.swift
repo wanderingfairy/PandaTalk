@@ -29,15 +29,15 @@ class MainFlow: Flow {
     }
     switch step {
     case .start:
-      let friendFlow = FriendFlow()
+      let friendsListFlow = FriendsListFlow()
       let chatListFlow = ChatListFlow()
       let settingFlow = SettingFlow()
-      Flows.use(friendFlow, chatListFlow, settingFlow, when: .ready) {
+      Flows.use(friendsListFlow, chatListFlow, settingFlow, when: .ready) {
         self.mainViewController.viewControllers = [$0, $1, $2]
       }
       return .multiple(flowContributors: [
         .contribute(withNextPresentable: mainViewController, withNextStepper: mainViewModel),
-        .flow(friendFlow, with: FriendStep.start),
+        .flow(friendsListFlow, with: FriendsListStep.start),
         .flow(chatListFlow, with: ChatListStep.start),
         .flow(settingFlow, with: SettingStep.start)
       ])

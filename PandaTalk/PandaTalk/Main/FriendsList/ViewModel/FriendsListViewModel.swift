@@ -9,6 +9,6 @@ import RxCocoa
 import RxDataSources
 import RxSwift
 
-class FriendListViewModel: BaseViewModel {
+class FriendsListViewModel: BaseViewModel {
   
 }
