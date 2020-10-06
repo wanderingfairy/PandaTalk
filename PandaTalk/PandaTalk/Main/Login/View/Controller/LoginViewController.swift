@@ -9,15 +9,18 @@ import RxSwift
 import RxCocoa
 import RxBinding
 import RxController
+import RxKeyboard
 import MaterialComponents.MaterialTextFields
 
 class LoginViewController: BaseViewController<LoginViewModel> {
-  
+    
   private lazy var scrollView = UIScrollView().then {
     $0.translatesAutoresizingMaskIntoConstraints = false
     $0.backgroundColor = .white
     $0.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
   }
+  
+  private lazy var contentView = UIView()
   
   private lazy var emailTextField = FloatingPlaceholderTextField().then {
     $0.setPlaceholderText = "Email"
@@ -40,9 +43,9 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     super.viewDidLoad()
     title = "Login"
     addSubViews()
-    binding()
     setUpUI()
     setUpConstraints()
+    binding()
   }
   
   //MARK: - Override Bind() in RxController
@@ -67,41 +70,67 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         print("buttonTap")
       }
       .disposed(by: disposeBag)
+    
+    RxKeyboard.instance.visibleHeight
+      .drive(onNext: { [scrollView] keyboardVisibleHeight in
+        scrollView.contentInset.bottom = keyboardVisibleHeight
+      })
+      .disposed(by: disposeBag)
+    
   }
   
   private func addSubViews() {
     view.addSubViews(views: [scrollView])
-    scrollView.addSubViews(views: [emailTextField, passwordTextField, signInButton])
+    scrollView.addSubview(contentView)
+    contentView.addSubViews(views: [emailTextField, passwordTextField, signInButton])
   }
   
   private func setUpUI() {
+    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapTouch))
+    scrollView.addGestureRecognizer(tapGestureRecognizer)
     
+//    registerKeyboardNotifications()
   }
   
   private func setUpConstraints() {
     scrollView.snp.makeConstraints {
       $0.edges.equalTo(view.safeAreaLayoutGuide)
-    }
-    emailTextField.snp.makeConstraints {
-      $0.top.equalToSuperview().offset(50)
       $0.centerX.equalToSuperview()
-      $0.width.equalToSuperview().multipliedBy(0.87)
-      $0.height.equalToSuperview().multipliedBy(0.1)
-    }
-    passwordTextField.snp.makeConstraints {
-      $0.top.equalTo(emailTextField.snp.bottom).offset(50)
-      $0.centerX.equalToSuperview()
-      $0.width.equalToSuperview().multipliedBy(0.87)
-      $0.height.equalToSuperview().multipliedBy(0.1)
     }
     
+    contentView.snp.makeConstraints {
+      $0.top.leading.trailing.bottom.equalToSuperview()
+      $0.centerX.equalToSuperview()
+    }
+    emailTextField.snp.makeConstraints {
+      $0.top.equalToSuperview().offset(30)
+      $0.centerX.equalToSuperview()
+      $0.leading.equalToSuperview().offset(16)
+      $0.trailing.equalToSuperview().offset(-16)
+    }
+    passwordTextField.snp.makeConstraints {
+      $0.top.equalTo(emailTextField.snp.bottom).offset(30)
+      $0.centerX.equalToSuperview()
+      $0.leading.equalTo(emailTextField)
+      $0.trailing.equalTo(emailTextField)
+    }
+
     signInButton.snp.makeConstraints {
-      $0.top.equalTo(passwordTextField.snp.bottom).offset(50)
+      $0.top.equalTo(passwordTextField.snp.bottom).offset(30)
       $0.trailing.equalTo(passwordTextField)
       $0.width.equalTo(passwordTextField).multipliedBy(0.3)
-      $0.height.equalTo(passwordTextField)
+      $0.height.equalTo(passwordTextField.snp.width).multipliedBy(0.15)
+    }
+    
+    contentView.snp.makeConstraints {
+      $0.bottom.greaterThanOrEqualTo(signInButton)
     }
   }
+  
+  @objc func didTapTouch(sender: UIGestureRecognizer) {
+    view.endEditing(true)
+  }
+  
 }
 
 extension UIView {

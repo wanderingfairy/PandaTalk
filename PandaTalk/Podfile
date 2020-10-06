@@ -21,6 +21,8 @@ target 'PandaTalk' do
   pod 'RxController'
   pod 'RxDataSources', '~> 4.0'
   pod 'RxBinding'
+  pod 'RxKeyboard'
+
 
   # For Debug
   pod 'FLEX', :configurations => ['Debug']

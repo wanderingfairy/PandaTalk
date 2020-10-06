@@ -504,6 +504,9 @@ PODS:
   - RxFlow (2.9.0):
     - RxCocoa (>= 5.1.1)
     - RxSwift (>= 5.1.1)
+  - RxKeyboard (1.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxOptional (4.1.0):
     - RxCocoa (~> 5)
     - RxSwift (~> 5)
@@ -536,6 +539,7 @@ DEPENDENCIES:
   - RxController
   - RxDataSources (~> 4.0)
   - RxFlow
+  - RxKeyboard
   - RxOptional
   - RxSwift
   - SkeletonView
@@ -584,6 +588,7 @@ SPEC REPOS:
     - RxController
     - RxDataSources
     - RxFlow
+    - RxKeyboard
     - RxOptional
     - RxRelay
     - RxSwift
@@ -633,6 +638,7 @@ SPEC CHECKSUMS:
   RxController: 72db6a1e0d1b9e6c3f85b0379a8b9e8b3273ae6e
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxFlow: a7f993ba4791174d414509a0ec03bfeff530a826
+  RxKeyboard: 6683c4344304a00f943c158bd8a43ce5469c82a7
   RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
@@ -641,6 +647,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: f9b335d0b1c397fe3f14c88372dd5190a84f23ec
+PODFILE CHECKSUM: 4ab1f55778486cac8ff30fc4f2ef4e64f0b1e8ae
 
 COCOAPODS: 1.8.4
