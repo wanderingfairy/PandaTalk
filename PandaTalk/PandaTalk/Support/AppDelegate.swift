@@ -9,6 +9,7 @@ import SnapKit
 import RxSwift
 import RxFlow
 import Firebase
+import Then
 
 @_exported import RxBinding
 
@@ -30,11 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //Login 분기 처리 필요
     appModelInstance.userModel.readCurrentUID { [unowned self] result in
       switch result {
-      case .success(let _):
+      case .success(_):
         self.coordinate {
           (AppFlow(window: $0), AppStep.main)
         }
-      case .failure(let _):
+      case .failure(_):
         self.coordinate {
           (AppFlow(window: $0), AppStep.login)
         }

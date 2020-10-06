@@ -7,6 +7,7 @@
 
 import RxController
 
+
 class BaseViewController<ViewModel: BaseViewModel>: RxViewController<ViewModel> {
   
 }

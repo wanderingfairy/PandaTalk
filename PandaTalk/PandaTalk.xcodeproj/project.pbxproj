@@ -19,12 +19,12 @@
 		15192D79252B768400199B7B /* LoginFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D78252B768400199B7B /* LoginFlow.swift */; };
 		15192D8D252B84BF00199B7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15192D8C252B84BF00199B7B /* GoogleService-Info.plist */; };
 		15192DEC252B8B3600199B7B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192DEB252B8B3600199B7B /* UserModel.swift */; };
+		15192E8E252C5EAE00199B7B /* FloatingPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192E8D252C5EAE00199B7B /* FloatingPlaceholderTextField.swift */; };
 		15712F0B2521EBC300C08F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F0A2521EBC300C08F74 /* AppDelegate.swift */; };
 		15712F142521EBC400C08F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15712F132521EBC400C08F74 /* Assets.xcassets */; };
 		15712F172521EBC400C08F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15712F152521EBC400C08F74 /* LaunchScreen.storyboard */; };
 		15712F222521EBC400C08F74 /* PandaTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F212521EBC400C08F74 /* PandaTalkTests.swift */; };
 		15712F2D2521EBC400C08F74 /* PandaTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F2C2521EBC400C08F74 /* PandaTalkUITests.swift */; };
-		15712F592521F6A200C08F74 /* AppModel+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F582521F6A200C08F74 /* AppModel+Protocol.swift */; };
 		15712F5E2521F6B800C08F74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F5D2521F6B800C08F74 /* Constants.swift */; };
 		15712F632521F6C700C08F74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F622521F6C700C08F74 /* LoginViewController.swift */; };
 		15712F682521F6DF00C08F74 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F672521F6DF00C08F74 /* LoginViewModel.swift */; };
@@ -38,7 +38,6 @@
 		15712F902521F74100C08F74 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F8F2521F74100C08F74 /* SettingViewController.swift */; };
 		15712F952521F74800C08F74 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F942521F74800C08F74 /* SettingViewModel.swift */; };
 		15712F9A2521F75000C08F74 /* SettingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F992521F75000C08F74 /* SettingDataModel.swift */; };
-		15712F9F2521F75F00C08F74 /* Service+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F9E2521F75F00C08F74 /* Service+Protocol.swift */; };
 		15712FA42521F76800C08F74 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FA32521F76800C08F74 /* APIManager.swift */; };
 		15712FA92521F77300C08F74 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FA82521F77300C08F74 /* AppModel.swift */; };
 		15712FAE2521F77800C08F74 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712FAD2521F77800C08F74 /* AppState.swift */; };
@@ -82,6 +81,7 @@
 		15192D78252B768400199B7B /* LoginFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlow.swift; sourceTree = "<group>"; };
 		15192D8C252B84BF00199B7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		15192DEB252B8B3600199B7B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		15192E8D252C5EAE00199B7B /* FloatingPlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPlaceholderTextField.swift; sourceTree = "<group>"; };
 		15712F072521EBC300C08F74 /* PandaTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandaTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15712F0A2521EBC300C08F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15712F132521EBC400C08F74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,7 +93,6 @@
 		15712F282521EBC400C08F74 /* PandaTalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PandaTalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15712F2C2521EBC400C08F74 /* PandaTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PandaTalkUITests.swift; sourceTree = "<group>"; };
 		15712F2E2521EBC400C08F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15712F582521F6A200C08F74 /* AppModel+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppModel+Protocol.swift"; sourceTree = "<group>"; };
 		15712F5D2521F6B800C08F74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		15712F622521F6C700C08F74 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		15712F672521F6DF00C08F74 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -107,7 +106,6 @@
 		15712F8F2521F74100C08F74 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		15712F942521F74800C08F74 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		15712F992521F75000C08F74 /* SettingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDataModel.swift; sourceTree = "<group>"; };
-		15712F9E2521F75F00C08F74 /* Service+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service+Protocol.swift"; sourceTree = "<group>"; };
 		15712FA32521F76800C08F74 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		15712FA82521F77300C08F74 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		15712FAD2521F77800C08F74 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -192,9 +190,26 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		15192E8C252C5CD200199B7B /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				15192E8D252C5EAE00199B7B /* FloatingPlaceholderTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		15192E92252C7E6F00199B7B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				15192D37252B431E00199B7B /* Flow */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		15712EFE2521EBC300C08F74 = {
 			isa = PBXGroup;
 			children = (
+				15192E92252C7E6F00199B7B /* Coordinator */,
 				15712F092521EBC300C08F74 /* PandaTalk */,
 				15712F202521EBC400C08F74 /* PandaTalkTests */,
 				15712F2B2521EBC400C08F74 /* PandaTalkUITests */,
@@ -218,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				15192D56252B6B7900199B7B /* Main */,
-				15192D37252B431E00199B7B /* Flow */,
 				15712F452521F61400C08F74 /* Extensions */,
 				15712F442521F60B00C08F74 /* Utility */,
 				15712F432521F5FE00C08F74 /* Support */,
@@ -326,8 +340,6 @@
 		15712F452521F61400C08F74 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				15712F582521F6A200C08F74 /* AppModel+Protocol.swift */,
-				15712F9E2521F75F00C08F74 /* Service+Protocol.swift */,
 				15192D47252B441500199B7B /* BaseViewController.swift */,
 				15192D4C252B441E00199B7B /* BaseViewModel.swift */,
 			);
@@ -363,6 +375,7 @@
 		15712FCE2521FA4700C08F74 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				15192E8C252C5CD200199B7B /* TextFields */,
 				15712FDB2521FABA00C08F74 /* Controller */,
 			);
 			path = View;
@@ -831,7 +844,6 @@
 				15712FC32521F8E700C08F74 /* ChattingViewModel.swift in Sources */,
 				15192D74252B748100199B7B /* SettingFlow.swift in Sources */,
 				15192D65252B6BD500199B7B /* MainFlow.swift in Sources */,
-				15712F9F2521F75F00C08F74 /* Service+Protocol.swift in Sources */,
 				15712F0B2521EBC300C08F74 /* AppDelegate.swift in Sources */,
 				15712F812521F72100C08F74 /* ChatListViewController.swift in Sources */,
 				15192DEC252B8B3600199B7B /* UserModel.swift in Sources */,
@@ -843,7 +855,7 @@
 				15712FBE2521F8E000C08F74 /* ChattingViewController.swift in Sources */,
 				15712F952521F74800C08F74 /* SettingViewModel.swift in Sources */,
 				15192D79252B768400199B7B /* LoginFlow.swift in Sources */,
-				15712F592521F6A200C08F74 /* AppModel+Protocol.swift in Sources */,
+				15192E8E252C5EAE00199B7B /* FloatingPlaceholderTextField.swift in Sources */,
 				15712F632521F6C700C08F74 /* LoginViewController.swift in Sources */,
 				15712F5E2521F6B800C08F74 /* Constants.swift in Sources */,
 				15712F9A2521F75000C08F74 /* SettingDataModel.swift in Sources */,

@@ -37,6 +37,13 @@ target 'PandaTalk' do
   # For SkeletonView
   pod "SkeletonView"
 
+  # For MDC
+  pod 'MaterialComponents/TextFields'
+  pod 'MaterialComponents/Buttons'
+  pod 'MaterialComponents/Dialogs'
+  pod 'MaterialComponents/ActivityIndicator'
+  pod 'MaterialComponents/ProgressView'
+
   target 'PandaTalkTests' do
     inherit! :search_paths
     # Pods for testing
