@@ -68,9 +68,13 @@ class LoginViewController: BaseViewController<LoginViewModel> {
   //MARK: - Override Bind() from RxController
   override func bind() -> [Disposable] {
     return [
-      emailTextField.textSubject ~> viewModel.emailTextSubject,
-      passwordTextField.textSubject ~> viewModel.passwordTextSubject
+      emailTextField.textSubject.distinctUntilChanged() ~> viewModel.emailTextSubject,
+      passwordTextField.textSubject.distinctUntilChanged() ~> viewModel.passwordTextSubject
     ]
+  }
+  
+  override func subviews() -> [UIView] {
+    [scrollView]
   }
   
   private func binding() {
@@ -78,6 +82,12 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     viewModel.emailTextSubject
       .subscribe(onNext: {
         print("currentText is", $0)
+      })
+      .disposed(by: disposeBag)
+    
+    viewModel.passwordTextSubject
+      .subscribe(onNext: {
+        print("Current password text is", $0)
       })
       .disposed(by: disposeBag)
     
@@ -107,7 +117,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
   }
   
   private func addSubviews() {
-    view.addSubviews(views: [scrollView])
+//    view.addSubviews(views: [scrollView])
     scrollView.addSubview(contentView)
     contentView.addSubviews(views: [emailTextField, passwordVerifyTextField, passwordTextField, signUpButton, signInButton])
   }

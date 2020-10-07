@@ -199,8 +199,8 @@
 		1519306A252E164900199B7B /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				1519306B252E164900199B7B /* LoginFlow.swift */,
 				1519306C252E164900199B7B /* AppFlow.swift */,
+				1519306B252E164900199B7B /* LoginFlow.swift */,
 				1519306D252E164900199B7B /* ChatListFlow.swift */,
 				1519306E252E164900199B7B /* MainFlow.swift */,
 				1519306F252E164900199B7B /* SettingFlow.swift */,

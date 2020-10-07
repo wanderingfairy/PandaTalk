@@ -18,4 +18,8 @@ class LoginViewModel: BaseViewModel {
   
   func didTapSignUpButton() {
   }
+  
+  func loginComplete() {
+    steps.accept(LoginStep.signUpComplete)
+  }
 }

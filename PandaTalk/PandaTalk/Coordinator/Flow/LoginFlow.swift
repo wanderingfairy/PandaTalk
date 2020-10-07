@@ -9,6 +9,8 @@ import RxFlow
 
 enum LoginStep: Step {
   case start
+  case signUpComplete
+//  case signInComplete
 }
 
 class LoginFlow: Flow {
@@ -27,7 +29,6 @@ class LoginFlow: Flow {
     loginViewController.navigationController
   }
   
-  
   func navigate(to step: Step) -> FlowContributors {
     guard let loginStep = step as? LoginStep else {
       return .none
@@ -35,6 +36,8 @@ class LoginFlow: Flow {
     switch loginStep {
     case .start:
       return .viewController(loginViewController)
+    case .signUpComplete:
+      return .end(forwardToParentFlowWithStep: AppStep.main)
     }
   }
 }
