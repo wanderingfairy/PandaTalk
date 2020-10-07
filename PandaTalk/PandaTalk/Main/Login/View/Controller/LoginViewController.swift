@@ -13,7 +13,9 @@ import RxKeyboard
 import MaterialComponents.MaterialTextFields
 
 class LoginViewController: BaseViewController<LoginViewModel> {
-    
+  
+  private var isSignUpFlow = false
+  
   private lazy var scrollView = UIScrollView().then {
     $0.translatesAutoresizingMaskIntoConstraints = false
     $0.backgroundColor = .white
@@ -26,6 +28,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     $0.setPlaceholderText = "Email"
     $0.backgroundColor = .white
     $0.setTextInputClearButtonMode = .unlessEditing
+    $0.setKeyboardType = .emailAddress
   }
   
   private lazy var passwordTextField = FloatingPlaceholderTextField().then {
@@ -33,22 +36,36 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     $0.backgroundColor = .white
     $0.setTextInputClearButtonMode = .unlessEditing
     $0.setIsSecureMode = true
+    $0.setTextContentType = .oneTimeCode
+  }
+  
+  private lazy var passwordVerifyTextField = FloatingPlaceholderTextField().then {
+    $0.setPlaceholderText = "Retype password"
+    $0.backgroundColor = .white
+    $0.setTextInputClearButtonMode = .unlessEditing
+    $0.setIsSecureMode = true
+    $0.setTextContentType = .oneTimeCode
+    $0.alpha = 0
   }
   
   private lazy var signInButton = MDCButton().then {
     $0.setTitle("Sign in", for: .normal)
   }
   
+  private lazy var signUpButton = MDCButton().then {
+    $0.setTitle("Sign up", for: .normal)
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "Login"
-    addSubViews()
+    addSubviews()
     setUpUI()
     setUpConstraints()
     binding()
   }
   
-  //MARK: - Override Bind() in RxController
+  //MARK: - Override Bind() from RxController
   override func bind() -> [Disposable] {
     return [
       emailTextField.textSubject ~> viewModel.emailTextSubject,
@@ -60,36 +77,45 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     //Check inject TextField text to Subject in ViewModel
     viewModel.emailTextSubject
       .subscribe(onNext: {
-                  print("currentText is", $0)
+        print("currentText is", $0)
       })
       .disposed(by: disposeBag)
     
     signInButton.rx.tap
       .bind { [unowned self] in
         self.viewModel.didTapSignInButton()
+        self.hideSignUpFlow()
         print("buttonTap")
+      }
+      .disposed(by: disposeBag)
+    
+    signUpButton.rx.tap
+      .bind { [unowned self] in
+        self.showSignUpFlow()
+        print("SignUpButton Tapped")
       }
       .disposed(by: disposeBag)
     
     RxKeyboard.instance.visibleHeight
       .drive(onNext: { [scrollView] keyboardVisibleHeight in
+        if scrollView.contentInset.bottom != keyboardVisibleHeight {
         scrollView.contentInset.bottom = keyboardVisibleHeight
+        }
       })
       .disposed(by: disposeBag)
     
   }
   
-  private func addSubViews() {
-    view.addSubViews(views: [scrollView])
+  private func addSubviews() {
+    view.addSubviews(views: [scrollView])
     scrollView.addSubview(contentView)
-    contentView.addSubViews(views: [emailTextField, passwordTextField, signInButton])
+    contentView.addSubviews(views: [emailTextField, passwordVerifyTextField, passwordTextField, signUpButton, signInButton])
   }
   
   private func setUpUI() {
     let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapTouch))
     scrollView.addGestureRecognizer(tapGestureRecognizer)
     
-//    registerKeyboardNotifications()
   }
   
   private func setUpConstraints() {
@@ -108,16 +134,29 @@ class LoginViewController: BaseViewController<LoginViewModel> {
       $0.leading.equalToSuperview().offset(16)
       $0.trailing.equalToSuperview().offset(-16)
     }
+    passwordVerifyTextField.snp.makeConstraints { $0.top.equalTo(emailTextField.snp.bottom).offset(30)
+      $0.centerX.equalToSuperview()
+      $0.leading.equalTo(emailTextField)
+      $0.trailing.equalTo(emailTextField)
+    }
+    
     passwordTextField.snp.makeConstraints {
       $0.top.equalTo(emailTextField.snp.bottom).offset(30)
       $0.centerX.equalToSuperview()
       $0.leading.equalTo(emailTextField)
       $0.trailing.equalTo(emailTextField)
     }
-
+    
     signInButton.snp.makeConstraints {
-      $0.top.equalTo(passwordTextField.snp.bottom).offset(30)
+      $0.top.equalTo(passwordVerifyTextField.snp.bottom).offset(30).priority(.medium)
       $0.trailing.equalTo(passwordTextField)
+      $0.width.equalTo(passwordTextField).multipliedBy(0.3)
+      $0.height.equalTo(passwordTextField.snp.width).multipliedBy(0.15)
+    }
+    
+    signUpButton.snp.makeConstraints {
+      $0.top.equalTo(passwordVerifyTextField.snp.bottom).offset(30).priority(.medium)
+      $0.trailing.equalTo(signInButton.snp.leading).offset(-30)
       $0.width.equalTo(passwordTextField).multipliedBy(0.3)
       $0.height.equalTo(passwordTextField.snp.width).multipliedBy(0.15)
     }
@@ -127,17 +166,60 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     }
   }
   
+  //MARK: - Handle TapGesture
   @objc func didTapTouch(sender: UIGestureRecognizer) {
     view.endEditing(true)
   }
   
-}
-
-extension UIView {
-  func addSubViews(views: [UIView]) {
-    views.forEach {
-      self.addSubview($0)
+  //MARK: - Handle UIAnimation
+  private func showSignUpFlow() {
+    if !isSignUpFlow {
+      isSignUpFlow.toggle()
+      self.view.layoutIfNeeded()
+      
+      passwordVerifyTextField.snp.remakeConstraints {
+        $0.top.equalTo(passwordTextField.snp.bottom).offset(30)
+        $0.centerX.equalToSuperview()
+        $0.leading.equalTo(emailTextField)
+        $0.trailing.equalTo(emailTextField)
+      }
+      
+      contentView.snp.remakeConstraints {
+        $0.top.leading.trailing.bottom.equalToSuperview()
+        $0.centerX.equalToSuperview()
+        $0.bottom.greaterThanOrEqualTo(signInButton)
+      }
+      
+      UIView.animate(withDuration: 0.5) {
+        self.passwordVerifyTextField.alpha = 1
+        self.view.layoutIfNeeded()
+      }
     }
   }
+  
+  private func hideSignUpFlow() {
+    if isSignUpFlow {
+      isSignUpFlow.toggle()
+      
+      self.view.layoutIfNeeded()
+      
+      passwordVerifyTextField.snp.remakeConstraints { $0.top.equalTo(emailTextField.snp.bottom).offset(30)
+        $0.centerX.equalToSuperview()
+        $0.leading.equalTo(emailTextField)
+        $0.trailing.equalTo(emailTextField)
+      }
+      
+      contentView.snp.remakeConstraints {
+        $0.top.leading.trailing.bottom.equalToSuperview()
+        $0.centerX.equalToSuperview()
+        $0.bottom.greaterThanOrEqualTo(signInButton)
+      }
+      
+      UIView.animate(withDuration: 0.5) {
+        self.passwordVerifyTextField.alpha = 0
+        self.view.layoutIfNeeded()
+      }
+    }
+  }
+  
 }
-

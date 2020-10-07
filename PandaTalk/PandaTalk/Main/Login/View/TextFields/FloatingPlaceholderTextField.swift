@@ -17,10 +17,21 @@ class FloatingPlaceholderTextField: UIView {
   private let textColor = UIColor.black
   private var clearButtonMode = UITextField.ViewMode.never
   private var isSecureMode = false
+  private var keyboardType = UIKeyboardType.default
+  private var textContentType = UITextContentType.oneTimeCode
   
   private var placeHolderText = ""
   
   let textSubject = BehaviorRelay<String>(value: "")
+  
+  var setTextContentType: UITextContentType {
+    get {
+      return textContentType
+    }
+    set(type) {
+      textContentType = type
+    }
+  }
   
   var setPlaceholderText: String {
     get{
@@ -49,6 +60,15 @@ class FloatingPlaceholderTextField: UIView {
     }
   }
   
+  var setKeyboardType: UIKeyboardType {
+    get {
+      return keyboardType
+    }
+    set(type) {
+      keyboardType = type
+    }
+  }
+  
   private func setupInputView() {
     
     if let _ = self.viewWithTag(1){return}
@@ -58,6 +78,8 @@ class FloatingPlaceholderTextField: UIView {
     textInput.tag = 1
     textInput.clearButtonMode = clearButtonMode
     textInput.isSecureTextEntry = isSecureMode
+    textInput.keyboardType = keyboardType
+    textInput.textContentType = textContentType
     
     self.addSubview(textInput)
     textInput.placeholder = placeHolderText
@@ -67,7 +89,6 @@ class FloatingPlaceholderTextField: UIView {
     textInput.snp.makeConstraints {
       $0.edges.equalToSuperview()
     }
-    
   }
   
   private func setupContoller(){
@@ -91,7 +112,6 @@ class FloatingPlaceholderTextField: UIView {
     setupContoller()
     
   }
-  
 }
 
 extension FloatingPlaceholderTextField: UITextFieldDelegate {

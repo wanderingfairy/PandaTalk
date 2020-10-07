@@ -15,4 +15,7 @@ class LoginViewModel: BaseViewModel {
   
   func didTapSignInButton() {
   }
+  
+  func didTapSignUpButton() {
+  }
 }

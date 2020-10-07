@@ -9,17 +9,18 @@
 /* Begin PBXBuildFile section */
 		15192D48252B441500199B7B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D47252B441500199B7B /* BaseViewController.swift */; };
 		15192D4D252B441E00199B7B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D4C252B441E00199B7B /* BaseViewModel.swift */; };
-		15192D52252B447700199B7B /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D51252B447700199B7B /* AppFlow.swift */; };
 		15192D58252B6B9200199B7B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D57252B6B9200199B7B /* MainViewController.swift */; };
 		15192D60252B6BC300199B7B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D5F252B6BC300199B7B /* MainViewModel.swift */; };
-		15192D65252B6BD500199B7B /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D64252B6BD500199B7B /* MainFlow.swift */; };
-		15192D6A252B72FF00199B7B /* FriendsListFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D69252B72FF00199B7B /* FriendsListFlow.swift */; };
-		15192D6F252B741900199B7B /* ChatListFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D6E252B741900199B7B /* ChatListFlow.swift */; };
-		15192D74252B748100199B7B /* SettingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D73252B748100199B7B /* SettingFlow.swift */; };
-		15192D79252B768400199B7B /* LoginFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192D78252B768400199B7B /* LoginFlow.swift */; };
 		15192D8D252B84BF00199B7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15192D8C252B84BF00199B7B /* GoogleService-Info.plist */; };
 		15192DEC252B8B3600199B7B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192DEB252B8B3600199B7B /* UserModel.swift */; };
 		15192E8E252C5EAE00199B7B /* FloatingPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15192E8D252C5EAE00199B7B /* FloatingPlaceholderTextField.swift */; };
+		15193071252E164900199B7B /* LoginFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1519306B252E164900199B7B /* LoginFlow.swift */; };
+		15193072252E164900199B7B /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1519306C252E164900199B7B /* AppFlow.swift */; };
+		15193073252E164900199B7B /* ChatListFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1519306D252E164900199B7B /* ChatListFlow.swift */; };
+		15193074252E164900199B7B /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1519306E252E164900199B7B /* MainFlow.swift */; };
+		15193075252E164900199B7B /* SettingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1519306F252E164900199B7B /* SettingFlow.swift */; };
+		15193076252E164900199B7B /* FriendsListFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15193070252E164900199B7B /* FriendsListFlow.swift */; };
+		1519307E252E17AB00199B7B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1519307D252E17AB00199B7B /* UIView+Extension.swift */; };
 		15712F0B2521EBC300C08F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F0A2521EBC300C08F74 /* AppDelegate.swift */; };
 		15712F142521EBC400C08F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15712F132521EBC400C08F74 /* Assets.xcassets */; };
 		15712F172521EBC400C08F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15712F152521EBC400C08F74 /* LaunchScreen.storyboard */; };
@@ -71,17 +72,19 @@
 /* Begin PBXFileReference section */
 		15192D47252B441500199B7B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		15192D4C252B441E00199B7B /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		15192D51252B447700199B7B /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		15192D57252B6B9200199B7B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		15192D5F252B6BC300199B7B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		15192D64252B6BD500199B7B /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
-		15192D69252B72FF00199B7B /* FriendsListFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListFlow.swift; sourceTree = "<group>"; };
-		15192D6E252B741900199B7B /* ChatListFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListFlow.swift; sourceTree = "<group>"; };
-		15192D73252B748100199B7B /* SettingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFlow.swift; sourceTree = "<group>"; };
-		15192D78252B768400199B7B /* LoginFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlow.swift; sourceTree = "<group>"; };
 		15192D8C252B84BF00199B7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		15192DEB252B8B3600199B7B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		15192E8D252C5EAE00199B7B /* FloatingPlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPlaceholderTextField.swift; sourceTree = "<group>"; };
+		1519306B252E164900199B7B /* LoginFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFlow.swift; sourceTree = "<group>"; };
+		1519306C252E164900199B7B /* AppFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
+		1519306D252E164900199B7B /* ChatListFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListFlow.swift; sourceTree = "<group>"; };
+		1519306E252E164900199B7B /* MainFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
+		1519306F252E164900199B7B /* SettingFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingFlow.swift; sourceTree = "<group>"; };
+		15193070252E164900199B7B /* FriendsListFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListFlow.swift; sourceTree = "<group>"; };
+		1519307D252E17AB00199B7B /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		15193082252E17DA00199B7B /* PandaTalk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PandaTalk-Bridging-Header.h"; sourceTree = "<group>"; };
 		15712F072521EBC300C08F74 /* PandaTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandaTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15712F0A2521EBC300C08F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15712F132521EBC400C08F74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,19 +166,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		15192D37252B431E00199B7B /* Flow */ = {
-			isa = PBXGroup;
-			children = (
-				15192D51252B447700199B7B /* AppFlow.swift */,
-				15192D64252B6BD500199B7B /* MainFlow.swift */,
-				15192D69252B72FF00199B7B /* FriendsListFlow.swift */,
-				15192D6E252B741900199B7B /* ChatListFlow.swift */,
-				15192D73252B748100199B7B /* SettingFlow.swift */,
-				15192D78252B768400199B7B /* LoginFlow.swift */,
-			);
-			path = Flow;
-			sourceTree = "<group>";
-		};
 		15192D56252B6B7900199B7B /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,18 +188,31 @@
 			path = TextFields;
 			sourceTree = "<group>";
 		};
-		15192E92252C7E6F00199B7B /* Coordinator */ = {
+		15193069252E164800199B7B /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				15192D37252B431E00199B7B /* Flow */,
+				1519306A252E164900199B7B /* Flow */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1519306A252E164900199B7B /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				1519306B252E164900199B7B /* LoginFlow.swift */,
+				1519306C252E164900199B7B /* AppFlow.swift */,
+				1519306D252E164900199B7B /* ChatListFlow.swift */,
+				1519306E252E164900199B7B /* MainFlow.swift */,
+				1519306F252E164900199B7B /* SettingFlow.swift */,
+				15193070252E164900199B7B /* FriendsListFlow.swift */,
+			);
+			path = Flow;
 			sourceTree = "<group>";
 		};
 		15712EFE2521EBC300C08F74 = {
 			isa = PBXGroup;
 			children = (
-				15192E92252C7E6F00199B7B /* Coordinator */,
+				15193082252E17DA00199B7B /* PandaTalk-Bridging-Header.h */,
 				15712F092521EBC300C08F74 /* PandaTalk */,
 				15712F202521EBC400C08F74 /* PandaTalkTests */,
 				15712F2B2521EBC400C08F74 /* PandaTalkUITests */,
@@ -232,6 +235,7 @@
 		15712F092521EBC300C08F74 /* PandaTalk */ = {
 			isa = PBXGroup;
 			children = (
+				15193069252E164800199B7B /* Coordinator */,
 				15192D56252B6B7900199B7B /* Main */,
 				15712F452521F61400C08F74 /* Extensions */,
 				15712F442521F60B00C08F74 /* Utility */,
@@ -340,6 +344,7 @@
 		15712F452521F61400C08F74 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1519307D252E17AB00199B7B /* UIView+Extension.swift */,
 				15192D47252B441500199B7B /* BaseViewController.swift */,
 				15192D4C252B441E00199B7B /* BaseViewModel.swift */,
 			);
@@ -840,34 +845,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				15712F722521F70000C08F74 /* FriendsListViewController.swift in Sources */,
-				15192D6F252B741900199B7B /* ChatListFlow.swift in Sources */,
+				15193072252E164900199B7B /* AppFlow.swift in Sources */,
 				15712FC32521F8E700C08F74 /* ChattingViewModel.swift in Sources */,
-				15192D74252B748100199B7B /* SettingFlow.swift in Sources */,
-				15192D65252B6BD500199B7B /* MainFlow.swift in Sources */,
+				15193071252E164900199B7B /* LoginFlow.swift in Sources */,
 				15712F0B2521EBC300C08F74 /* AppDelegate.swift in Sources */,
 				15712F812521F72100C08F74 /* ChatListViewController.swift in Sources */,
 				15192DEC252B8B3600199B7B /* UserModel.swift in Sources */,
 				15712F902521F74100C08F74 /* SettingViewController.swift in Sources */,
+				1519307E252E17AB00199B7B /* UIView+Extension.swift in Sources */,
 				15712F7C2521F71500C08F74 /* FriendListDataModel.swift in Sources */,
 				15192D58252B6B9200199B7B /* MainViewController.swift in Sources */,
 				15192D60252B6BC300199B7B /* MainViewModel.swift in Sources */,
 				15192D4D252B441E00199B7B /* BaseViewModel.swift in Sources */,
+				15193076252E164900199B7B /* FriendsListFlow.swift in Sources */,
 				15712FBE2521F8E000C08F74 /* ChattingViewController.swift in Sources */,
 				15712F952521F74800C08F74 /* SettingViewModel.swift in Sources */,
-				15192D79252B768400199B7B /* LoginFlow.swift in Sources */,
 				15192E8E252C5EAE00199B7B /* FloatingPlaceholderTextField.swift in Sources */,
 				15712F632521F6C700C08F74 /* LoginViewController.swift in Sources */,
+				15193073252E164900199B7B /* ChatListFlow.swift in Sources */,
 				15712F5E2521F6B800C08F74 /* Constants.swift in Sources */,
 				15712F9A2521F75000C08F74 /* SettingDataModel.swift in Sources */,
-				15192D6A252B72FF00199B7B /* FriendsListFlow.swift in Sources */,
 				15712FA92521F77300C08F74 /* AppModel.swift in Sources */,
 				15712FB82521F79700C08F74 /* DataModel.swift in Sources */,
 				15712F8B2521F73800C08F74 /* ChatListDataModel.swift in Sources */,
 				15712FA42521F76800C08F74 /* APIManager.swift in Sources */,
 				15712FC82521F8EE00C08F74 /* ChattingDataModel.swift in Sources */,
-				15192D52252B447700199B7B /* AppFlow.swift in Sources */,
 				15712FAE2521F77800C08F74 /* AppState.swift in Sources */,
 				15712F772521F70C00C08F74 /* FriendsListViewModel.swift in Sources */,
+				15193074252E164900199B7B /* MainFlow.swift in Sources */,
+				15193075252E164900199B7B /* SettingFlow.swift in Sources */,
 				15192D48252B441500199B7B /* BaseViewController.swift in Sources */,
 				15712FB32521F77D00C08F74 /* AppError.swift in Sources */,
 				15712F862521F72E00C08F74 /* ChatListViewModel.swift in Sources */,

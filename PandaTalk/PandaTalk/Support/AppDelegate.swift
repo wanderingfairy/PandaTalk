@@ -11,6 +11,11 @@ import RxFlow
 import Firebase
 import Then
 
+#if DEBUG
+import Gedatsu
+import FLEX
+#endif
+
 @_exported import RxBinding
 
 @UIApplicationMain
@@ -22,6 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private let appModelInstance = AppModel.instance
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    #if DEBUG
+    Gedatsu.open()
+    FLEXManager.shared.showExplorer()
+    #endif
+    
     FirebaseApp.configure()
     
     coordinator.rx.didNavigate.subscribe(onNext: {
