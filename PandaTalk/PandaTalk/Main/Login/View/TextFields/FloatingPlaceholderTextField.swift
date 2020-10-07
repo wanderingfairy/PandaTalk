@@ -74,7 +74,7 @@ class FloatingPlaceholderTextField: UIView {
   private func setupInputView() {
     
     if let _ = self.viewWithTag(1){return}
-
+    
     textInput = MDCTextField()
     
     textInput.tag = 1
@@ -111,30 +111,42 @@ class FloatingPlaceholderTextField: UIView {
   func bindTextField() {
     if (textInput != nil && controller != nil) {
       // When password is wrong
-    textInput.rx.text
-      .replaceNilWith("")
-      .filter { [unowned self] _ in
-        self.placeHolderText == "Password"
-      }
-      .filter { $0.count < 8 && $0.count > 0}
-      .bind { [unowned self] _ in
-        controller.setErrorText("Password is too short",
-                                               errorAccessibilityValue: nil)
-      }
-      .disposed(by: disposeBag)
+      textInput.rx.text
+        .replaceNilWith("")
+        .filter { [unowned self] _ in
+          self.placeHolderText == "Password"
+        }
+        .filter { $0.count < 8 && $0.count > 0}
+        .bind { [unowned self] _ in
+          textSubject.accept("")
+          controller.setErrorText("Password is too short",
+                                  errorAccessibilityValue: nil)
+        }
+        .disposed(by: disposeBag)
       
-    // When password is correct
-    textInput.rx.text
-      .replaceNilWith("")
-      .filter { [unowned self] _ in
-        self.placeHolderText == "Password"
-      }
-      .filter { $0.count >= 8}
-      .bind { [unowned self] text in
-        textSubject.accept(text)
-        controller.setErrorText(nil, errorAccessibilityValue:nil)
-      }
-      .disposed(by: disposeBag)
+      // When password is correct
+      textInput.rx.text
+        .replaceNilWith("")
+        .filter { [unowned self] _ in
+          self.placeHolderText == "Password"
+        }
+        .filter { $0.count >= 8}
+        .bind { [unowned self] text in
+          textSubject.accept(text)
+          controller.setErrorText(nil, errorAccessibilityValue:nil)
+        }
+        .disposed(by: disposeBag)
+      
+      // Retype password일 때 텍스트 입력시 accept
+      textInput.rx.text
+        .replaceNilWith("")
+        .filter { [unowned self] _ in
+          self.placeHolderText == "Retype password"
+        }
+        .bind { [unowned self] text in
+          textSubject.accept(text)
+        }
+        .disposed(by: disposeBag)
       
       //이메일 잘못된 형식일 때
       textInput.rx.text
@@ -143,6 +155,7 @@ class FloatingPlaceholderTextField: UIView {
           self.placeHolderText == "Email" && text.count > 0 && !isValidEmail(testStr: text)
         }
         .bind { [unowned self] text in
+          textSubject.accept("")
           controller.setErrorText("Wrong email", errorAccessibilityValue: nil)
         }
         .disposed(by: disposeBag)
@@ -158,10 +171,17 @@ class FloatingPlaceholderTextField: UIView {
           controller.setErrorText(nil, errorAccessibilityValue: nil)
         }
         .disposed(by: disposeBag)
-      
-
-      
     }
+  }
+  
+  func makeRetypePasswordTextFieldError() {
+//      print(#function)
+      controller.setErrorText("Password does not match", errorAccessibilityValue: nil)
+  }
+  
+  func removeErrorText() {
+//    print(#function)
+    controller.setErrorText(nil, errorAccessibilityValue: nil)
   }
   
   override func layoutSubviews() {
@@ -173,25 +193,25 @@ class FloatingPlaceholderTextField: UIView {
 }
 
 extension FloatingPlaceholderTextField: UITextFieldDelegate {
-//  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//    textField.resignFirstResponder()
-//
-//
-//    return true
-//  }
-//
-//  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//    if (placeHolderText == "Password") {
-//    let textFieldCharacterCount = textField.text?.count ?? 0
-//          if (textFieldCharacterCount < 8) {
-//            controller.setErrorText("Password is too short",
-//                                                   errorAccessibilityValue: nil)
-//          } else {
-//            textSubject.accept(textField.text!)
-//            controller.setErrorText(nil, errorAccessibilityValue:nil)
-//       }
-//    }
-//    return true
-//  }
+  //  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+  //    textField.resignFirstResponder()
+  //
+  //
+  //    return true
+  //  }
+  //
+  //  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+  //    if (placeHolderText == "Password") {
+  //    let textFieldCharacterCount = textField.text?.count ?? 0
+  //          if (textFieldCharacterCount < 8) {
+  //            controller.setErrorText("Password is too short",
+  //                                                   errorAccessibilityValue: nil)
+  //          } else {
+  //            textSubject.accept(textField.text!)
+  //            controller.setErrorText(nil, errorAccessibilityValue:nil)
+  //       }
+  //    }
+  //    return true
+  //  }
 }
 

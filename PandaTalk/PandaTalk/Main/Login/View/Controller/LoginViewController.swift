@@ -69,7 +69,8 @@ class LoginViewController: BaseViewController<LoginViewModel> {
   override func bind() -> [Disposable] {
     return [
       emailTextField.textSubject.distinctUntilChanged() ~> viewModel.emailTextSubject,
-      passwordTextField.textSubject.distinctUntilChanged() ~> viewModel.passwordTextSubject
+      passwordTextField.textSubject.distinctUntilChanged() ~> viewModel.passwordTextSubject,
+      passwordVerifyTextField.textSubject.distinctUntilChanged() ~> viewModel.retypePasswordTextSubject
     ]
   }
   
@@ -79,23 +80,55 @@ class LoginViewController: BaseViewController<LoginViewModel> {
   
   private func binding() {
     //Check inject TextField text to Subject in ViewModel
-    viewModel.emailTextSubject
-      .subscribe(onNext: {
-        print("currentText is", $0)
-      })
-      .disposed(by: disposeBag)
+//    viewModel.emailTextSubject
+//      .subscribe(onNext: {
+//        print("currentText is", $0)
+//      })
+//      .disposed(by: disposeBag)
+//
+//    viewModel.passwordTextSubject
+//      .subscribe(onNext: {
+//        print("Current password text is", $0)
+//      })
+//      .disposed(by: disposeBag)
+//
+//    viewModel.retypePasswordTextSubject
+//      .subscribe(onNext: {
+//        print("Current retypePasswordTextSubject is", $0)
+//      })
+//      .disposed(by: disposeBag)
     
-    viewModel.passwordTextSubject
-      .subscribe(onNext: {
-        print("Current password text is", $0)
-      })
+    //password 비교 검증
+    Observable.combineLatest(viewModel.passwordTextSubject, viewModel.retypePasswordTextSubject) { [unowned self] password, retype -> Observable<Bool> in
+      let observableTuple = Observable<Bool>.create { (observer) -> Disposable in
+        if password.count >= 8 && retype.count == 0 {
+          self.viewModel.passwordIsEqualToRetypePasswordSubject.onNext(false)
+          observer.onNext(true)
+        } else if password.count >= 8 && password != retype {
+          self.viewModel.passwordIsEqualToRetypePasswordSubject.onNext(false)
+          observer.onNext(false)
+        } else if password.count >= 8 && retype == password {
+          self.viewModel.passwordIsEqualToRetypePasswordSubject.onNext(true)
+        observer.onNext(true)
+        }
+        return Disposables.create()
+      }
+      return observableTuple
+    }
+    .observeOn(MainScheduler.instance)
+    .subscribe (onNext: { [unowned self] bool in
+      bool.bind { correct in
+        correct ? self.passwordVerifyTextField.removeErrorText() : self.passwordVerifyTextField.makeRetypePasswordTextFieldError()
+      }
       .disposed(by: disposeBag)
+    })
+    .disposed(by: disposeBag)
+
     
     signInButton.rx.tap
       .bind { [unowned self] in
-        self.viewModel.didTapSignInButton()
         self.hideSignUpFlow()
-        print("buttonTap")
+        print("SignInButton Tapped")
       }
       .disposed(by: disposeBag)
     
@@ -104,6 +137,19 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         self.showSignUpFlow()
         print("SignUpButton Tapped")
       }
+      .disposed(by: disposeBag)
+    
+    viewModel.checkCanSignIn()
+    viewModel.checkCanSignUp()
+    
+    //회원가입 조건 이메일 & 비밀번호 검증 통과
+    viewModel.canSignUpSubject
+      .bind { print("canSignUpSubject is ", $0) }
+      .disposed(by: disposeBag)
+    
+    //로그인 조건 이메일 & 비밀번호 검증 통과
+    viewModel.canSignInSubject
+      .bind { print("canSignInSubject is ", $0)}
       .disposed(by: disposeBag)
     
     RxKeyboard.instance.visibleHeight

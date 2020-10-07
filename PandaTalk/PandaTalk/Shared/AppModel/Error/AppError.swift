@@ -8,6 +8,7 @@
 import Foundation
  
 enum AppError: Error {
+  case error
   case generalError
   case uidIsNil
   case currentUIDReadingIsFail
