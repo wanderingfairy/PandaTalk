@@ -12,6 +12,9 @@ class LoginViewModel: BaseViewModel {
   
   let apiManager = APIManager.instance
   
+  var emailText = ""
+  var passwordText = ""
+  
   let emailTextSubject = BehaviorSubject<String>(value: "")
   let passwordTextSubject = BehaviorSubject<String>(value: "")
   let retypePasswordTextSubject = BehaviorSubject<String>(value: "")
@@ -26,17 +29,28 @@ class LoginViewModel: BaseViewModel {
   //MARK: - ViewModel start function.
   // 유저가 로그인 된 상태면 로그인 뷰 닫고 메인 탭바 켬.
   func viewModelStart() {
+    emailTextSubject
+      .subscribe(onNext: { [unowned self] in self.emailText = $0 })
+      .disposed(by: disposeBag)
+    
+    passwordTextSubject
+      .subscribe(onNext: { [unowned self] in self.passwordText = $0})
+      .disposed(by: disposeBag)
+    
+    
+  }
+  
+  func checkUserLoginStatus() {
     apiManager.userStatusBooleanSubject
       .distinctUntilChanged()
       .filter { $0 == true}
       .bind { [unowned self] _ in
+        print("User is already logined")
         self.steps.accept(LoginStep.loginComplete)
       }
       .disposed(by: disposeBag)
   }
   
-  func didTapSignInButton() {
-  }
   
   func checkCanSignUp() {
     emailTextSubject
@@ -62,13 +76,39 @@ class LoginViewModel: BaseViewModel {
     Observable.combineLatest(emailIsValidSubject, passwordIsValidSubject) { ($0 && $1)}
       .distinctUntilChanged()
       .bind { [unowned self] bool in
-          self.canSignInSubject.onNext(bool)
+        self.canSignInSubject.onNext(bool)
       }
       .disposed(by: disposeBag)
   }
   
-
   func didTapSignUpButton() {
-    steps.accept(LoginStep.loginComplete)
+    canSignUpSubject
+      .distinctUntilChanged()
+      .take(1)
+      .filter { $0 == true }
+      .bind { [unowned self] _ in self.apiManager.postCreateUserWithEmailAndPW(email: emailText, pw: passwordText) { bool in
+        if bool {
+          self.checkUserLoginStatus()
+        }
+      }
+      }
+      .disposed(by: disposeBag)
+  }
+  
+  func didTapSignInButton() {
+    print(#function, "함수는 실행됨")
+    canSignInSubject
+      .distinctUntilChanged()
+      .take(1)
+      .filter { $0 == true}
+      .bind { [unowned self] _ in
+        print(#function)
+        self.apiManager.postSignInWithEmailAndPW(email: emailText, pw: passwordText) { bool in
+          if bool {
+            self.checkUserLoginStatus()
+          }
+        }
+      }
+      .disposed(by: disposeBag)
   }
 }

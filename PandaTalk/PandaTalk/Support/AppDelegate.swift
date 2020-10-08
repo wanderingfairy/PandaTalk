@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private let disposeBag = DisposeBag()
   private let window = UIWindow()
   private let appModelInstance = AppModel.instance
+  private let apiManagerInstance = APIManager.instance
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     #if DEBUG
@@ -33,19 +34,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     #endif
     
     FirebaseApp.configure()
+    AppModel.instance.appStart()
     
     coordinator.rx.didNavigate.subscribe(onNext: {
         print("did navigate to \($0) -> \($1)")
     }).disposed(by: disposeBag)
     
+    //SignOut
+//    try? Auth.auth().signOut()
+    
     //Login 분기 처리 필요
-    appModelInstance.userModel.readCurrentUID { [unowned self] result in
-      switch result {
-      case .success(_):
+    apiManagerInstance.checkUserStatusInAPIManager() { [unowned self] bool in
+      switch bool {
+      case true :
         self.coordinate {
           (AppFlow(window: $0), AppStep.main)
         }
-      case .failure(_):
+      case false:
         self.coordinate {
           (AppFlow(window: $0), AppStep.login)
         }

@@ -40,6 +40,7 @@ class AppFlow: Flow {
       }
       return .flow(loginFlow, with: LoginStep.start)
     case .main:
+      print("AppFlow .main step is run")
       self.navigationController.popToRootViewController(animated: true)
       let mainFlow = MainFlow()
       Flows.use(mainFlow, when: .ready) { [unowned self] in

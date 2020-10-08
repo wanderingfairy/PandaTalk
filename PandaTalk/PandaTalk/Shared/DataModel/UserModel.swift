@@ -7,31 +7,12 @@
 
 import RxSwift
 import RxOptional
+import Firebase
+import FirebaseAuth
 
 struct UserModel {
   
   private let bag = DisposeBag()
   
-  private let firebaseUID = BehaviorSubject<String?>(value: nil)
-  
-  func setting(UID: String?) throws {
-    guard let uid = UID else {
-      throw AppError.uidIsNil
-    }
-    firebaseUID.onNext(uid)
-    print("UID save is success")
-  }
-  
-  func readCurrentUID(completion: @escaping (Result<String,AppError>) -> Void) {
-    firebaseUID
-      .errorOnNil(AppError.currentUIDReadingIsFail)
-      .subscribe(
-        onNext: { uid in
-          completion(.success(uid))
-        },
-        onError: { (error) in
-          completion(.failure(.currentUIDReadingIsFail))
-      })
-      .disposed(by: bag)
-  }
+  var user = ""
 }

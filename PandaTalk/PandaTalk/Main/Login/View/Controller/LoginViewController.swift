@@ -65,6 +65,11 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     binding()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    viewModel.checkUserLoginStatus()
+  }
+  
   //MARK: - Override Bind() from RxController
   override func bind() -> [Disposable] {
     return [
@@ -112,13 +117,41 @@ class LoginViewController: BaseViewController<LoginViewModel> {
       .bind { [unowned self] in
         self.hideSignUpFlow()
         print("SignInButton Tapped")
+        
+        //로그인 상태이고, 올바른 이메일 & 패스워드일 때 로그인 요청
+        if !isSignUpFlow {
+        self.viewModel.canSignInSubject
+          .takeWhile { $0 == true }
+          .bind { bool in
+            if bool {
+              print("didTapSignIpButton() is run in LoginVC")
+              self.viewModel.didTapSignInButton()
+            }
+          }
+          .disposed(by: disposeBag)
+        }
       }
       .disposed(by: disposeBag)
+    
+    
     
     signUpButton.rx.tap
       .bind { [unowned self] in
         self.showSignUpFlow()
         print("SignUpButton Tapped")
+        
+        //회원가입 상태이고, 올바른 이메일 & 패스워드일 때 회원가입 요청
+        if isSignUpFlow {
+        self.viewModel.canSignUpSubject
+          .takeWhile { $0 == true }
+          .bind { bool in
+            if bool {
+              print("didTapSignUpButton() is run in LoginVC")
+              self.viewModel.didTapSignUpButton()
+            }
+          }
+          .disposed(by: disposeBag)
+        }
       }
       .disposed(by: disposeBag)
     
