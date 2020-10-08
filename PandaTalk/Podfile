@@ -23,7 +23,6 @@ target 'PandaTalk' do
   pod 'RxBinding'
   pod 'RxKeyboard'
 
-
   # For Debug
   pod 'FLEX', :configurations => ['Debug']
   pod 'Gedatsu', configuration: %w(Debug)
@@ -35,6 +34,14 @@ target 'PandaTalk' do
   pod 'Firebase/Core'
   pod 'FirebaseUI'
   pod 'GoogleSignIn'
+
+  # For RxFirebase
+  pod 'RxFirebase/Firestore'
+  pod 'RxFirebase/RemoteConfig'
+  pod 'RxFirebase/Database'
+  pod 'RxFirebase/Storage'
+  pod 'RxFirebase/Auth'
+  pod 'RxFirebase/Functions'
 
   # For SkeletonView
   pod "SkeletonView"

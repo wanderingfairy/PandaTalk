@@ -10,6 +10,8 @@ import RxBinding
 
 class LoginViewModel: BaseViewModel {
   
+  let apiManager = APIManager.instance
+  
   let emailTextSubject = BehaviorSubject<String>(value: "")
   let passwordTextSubject = BehaviorSubject<String>(value: "")
   let retypePasswordTextSubject = BehaviorSubject<String>(value: "")
@@ -20,6 +22,18 @@ class LoginViewModel: BaseViewModel {
   
   let canSignUpSubject = BehaviorSubject<Bool>(value: false)
   let canSignInSubject = BehaviorSubject<Bool>(value: false)
+  
+  //MARK: - ViewModel start function.
+  // 유저가 로그인 된 상태면 로그인 뷰 닫고 메인 탭바 켬.
+  func viewModelStart() {
+    apiManager.userStatusBooleanSubject
+      .distinctUntilChanged()
+      .filter { $0 == true}
+      .bind { [unowned self] _ in
+        self.steps.accept(LoginStep.loginComplete)
+      }
+      .disposed(by: disposeBag)
+  }
   
   func didTapSignInButton() {
   }
@@ -55,6 +69,6 @@ class LoginViewModel: BaseViewModel {
   
 
   func didTapSignUpButton() {
-    steps.accept(LoginStep.signUpComplete)
+    steps.accept(LoginStep.loginComplete)
   }
 }

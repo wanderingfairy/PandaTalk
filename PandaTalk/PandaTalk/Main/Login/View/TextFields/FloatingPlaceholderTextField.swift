@@ -130,10 +130,15 @@ class FloatingPlaceholderTextField: UIView {
         .filter { [unowned self] _ in
           self.placeHolderText == "Password"
         }
-        .filter { $0.count >= 8}
+        .filter { $0.count >= 8 || $0.count == 0}
         .bind { [unowned self] text in
-          textSubject.accept(text)
-          controller.setErrorText(nil, errorAccessibilityValue:nil)
+          if text.count == 0 {
+            controller.setErrorText(nil, errorAccessibilityValue:nil)
+          } else {
+            textSubject.accept(text)
+            controller.setErrorText(nil, errorAccessibilityValue:nil)
+          }
+          
         }
         .disposed(by: disposeBag)
       

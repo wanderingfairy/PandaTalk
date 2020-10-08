@@ -79,24 +79,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
   }
   
   private func binding() {
-    //Check inject TextField text to Subject in ViewModel
-//    viewModel.emailTextSubject
-//      .subscribe(onNext: {
-//        print("currentText is", $0)
-//      })
-//      .disposed(by: disposeBag)
-//
-//    viewModel.passwordTextSubject
-//      .subscribe(onNext: {
-//        print("Current password text is", $0)
-//      })
-//      .disposed(by: disposeBag)
-//
-//    viewModel.retypePasswordTextSubject
-//      .subscribe(onNext: {
-//        print("Current retypePasswordTextSubject is", $0)
-//      })
-//      .disposed(by: disposeBag)
+    viewModel.viewModelStart()
     
     //password 비교 검증
     Observable.combineLatest(viewModel.passwordTextSubject, viewModel.retypePasswordTextSubject) { [unowned self] password, retype -> Observable<Bool> in

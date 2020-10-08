@@ -9,7 +9,7 @@ import RxFlow
 
 enum LoginStep: Step {
   case start
-  case signUpComplete
+  case loginComplete
 //  case signInComplete
 }
 
@@ -36,7 +36,7 @@ class LoginFlow: Flow {
     switch loginStep {
     case .start:
       return .viewController(loginViewController)
-    case .signUpComplete:
+    case .loginComplete:
       return .end(forwardToParentFlowWithStep: AppStep.main)
     }
   }
