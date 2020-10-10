@@ -36,8 +36,6 @@ class LoginViewModel: BaseViewModel {
     passwordTextSubject
       .subscribe(onNext: { [unowned self] in self.passwordText = $0})
       .disposed(by: disposeBag)
-    
-    
   }
   
   func checkUserLoginStatus() {

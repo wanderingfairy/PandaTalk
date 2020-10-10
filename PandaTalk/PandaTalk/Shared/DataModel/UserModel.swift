@@ -14,5 +14,8 @@ struct UserModel {
   
   private let bag = DisposeBag()
   
-  var user = ""
+  let userSubject = BehaviorSubject<User?>(value: nil)
+  
+  let userEmail = BehaviorSubject<String?>(value: nil)
+  let uid = BehaviorSubject<String?>(value: nil)
 }

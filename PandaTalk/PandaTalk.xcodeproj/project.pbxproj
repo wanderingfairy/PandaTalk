@@ -21,6 +21,7 @@
 		15193075252E164900199B7B /* SettingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1519306F252E164900199B7B /* SettingFlow.swift */; };
 		15193076252E164900199B7B /* FriendsListFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15193070252E164900199B7B /* FriendsListFlow.swift */; };
 		1519307E252E17AB00199B7B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1519307D252E17AB00199B7B /* UIView+Extension.swift */; };
+		151930D42531AB0900199B7B /* FriendsCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151930D32531AB0900199B7B /* FriendsCardViewController.swift */; };
 		15712F0B2521EBC300C08F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F0A2521EBC300C08F74 /* AppDelegate.swift */; };
 		15712F142521EBC400C08F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15712F132521EBC400C08F74 /* Assets.xcassets */; };
 		15712F172521EBC400C08F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15712F152521EBC400C08F74 /* LaunchScreen.storyboard */; };
@@ -85,6 +86,7 @@
 		15193070252E164900199B7B /* FriendsListFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListFlow.swift; sourceTree = "<group>"; };
 		1519307D252E17AB00199B7B /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		15193082252E17DA00199B7B /* PandaTalk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PandaTalk-Bridging-Header.h"; sourceTree = "<group>"; };
+		151930D32531AB0900199B7B /* FriendsCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCardViewController.swift; sourceTree = "<group>"; };
 		15712F072521EBC300C08F74 /* PandaTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandaTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15712F0A2521EBC300C08F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15712F132521EBC400C08F74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				15712F712521F70000C08F74 /* FriendsListViewController.swift */,
+				151930D32531AB0900199B7B /* FriendsCardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -874,6 +877,7 @@
 				15712F772521F70C00C08F74 /* FriendsListViewModel.swift in Sources */,
 				15193074252E164900199B7B /* MainFlow.swift in Sources */,
 				15193075252E164900199B7B /* SettingFlow.swift in Sources */,
+				151930D42531AB0900199B7B /* FriendsCardViewController.swift in Sources */,
 				15192D48252B441500199B7B /* BaseViewController.swift in Sources */,
 				15712FB32521F77D00C08F74 /* AppError.swift in Sources */,
 				15712F862521F72E00C08F74 /* ChatListViewModel.swift in Sources */,

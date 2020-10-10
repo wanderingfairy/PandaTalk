@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }).disposed(by: disposeBag)
     
     //SignOut
-//    try? Auth.auth().signOut()
+    try? Auth.auth().signOut()
     
     //Login 분기 처리 필요
     apiManagerInstance.checkUserStatusInAPIManager() { [unowned self] bool in

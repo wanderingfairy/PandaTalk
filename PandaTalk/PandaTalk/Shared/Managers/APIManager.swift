@@ -18,12 +18,15 @@ class APIManager {
   
   let userStatusBooleanSubject = BehaviorSubject<Bool>(value: false)
   
+  let user = BehaviorSubject<User?>(value: nil)
+  
   let currentUserEmailSubject = BehaviorSubject<String>(value: "")
   
   //MARK: - This function must be called from the AppModel instance.
   func apiManagerStart() {
     guard let email = Auth.auth().currentUser?.email else { return }
     print(#function, email)
+    user.onNext(Auth.auth().currentUser)
     currentUserEmailSubject.onNext(email)
     userStatusBooleanSubject.onNext(true)
   }
@@ -45,6 +48,7 @@ class APIManager {
         guard let userEmail = authResult.user.email else {
           print("회원가입 성공했으나 이메일 없음")
           return }
+        self.user.onNext(authResult.user)
         self.currentUserEmailSubject.onNext(userEmail)
         self.userStatusBooleanSubject.onNext(true)
         print(#function, "user Create success")
@@ -67,6 +71,7 @@ class APIManager {
           print("로그인 성공했으나 이메일 없음")
           return }
         print(authResult.user.email)
+        self.user.onNext(authResult.user)
         self.currentUserEmailSubject.onNext(userEmail)
         self.userStatusBooleanSubject.onNext(true)
         print(#function, "user sign in success")
@@ -77,6 +82,5 @@ class APIManager {
             completion(false)
           }).disposed(by: disposeBag)
   }
-  
   
 }
