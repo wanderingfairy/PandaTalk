@@ -83,4 +83,13 @@ class APIManager {
           }).disposed(by: disposeBag)
   }
   
+  func postUserInfoToDataBase(userInfo: CurrentUser) -> Observable<Bool> {
+    return Observable.create { (observer) -> Disposable in
+      observer.onNext(true)
+      
+      return Disposables.create {
+        observer.onCompleted()
+      }
+    }
+  }
 }

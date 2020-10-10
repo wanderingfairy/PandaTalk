@@ -52,6 +52,8 @@ target 'PandaTalk' do
   pod 'MaterialComponents/Dialogs'
   pod 'MaterialComponents/ActivityIndicator'
   pod 'MaterialComponents/ProgressView'
+  pod 'MaterialComponents/List'
+  pod 'MaterialComponents/List+Theming'
 
   target 'PandaTalkTests' do
     inherit! :search_paths

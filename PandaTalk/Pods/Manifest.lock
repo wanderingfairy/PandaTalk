@@ -450,6 +450,18 @@ PODS:
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
+  - MaterialComponents/List (117.0.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+  - "MaterialComponents/List+Theming (117.0.0)":
+    - MaterialComponents/List
+    - MaterialComponents/schemes/Container
   - MaterialComponents/Palettes (117.0.0)
   - MaterialComponents/private/Application (117.0.0)
   - MaterialComponents/private/Color (117.0.0):
@@ -466,6 +478,22 @@ PODS:
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
+  - MaterialComponents/schemes/Color (117.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+  - MaterialComponents/schemes/Container (117.0.0):
+    - MaterialComponents/schemes/Color
+    - MaterialComponents/schemes/Shape
+    - MaterialComponents/schemes/Typography
+  - MaterialComponents/schemes/Shape (117.0.0):
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+  - MaterialComponents/schemes/Typography (117.0.0):
+    - "MaterialComponents/schemes/Typography+BasicFontScheme"
+    - "MaterialComponents/schemes/Typography+Scheming"
+    - MaterialComponents/Typography
+  - "MaterialComponents/schemes/Typography+BasicFontScheme (117.0.0)"
+  - "MaterialComponents/schemes/Typography+Scheming (117.0.0)"
   - MaterialComponents/ShadowElevations (117.0.0)
   - MaterialComponents/ShadowLayer (117.0.0):
     - MaterialComponents/ShadowElevations
@@ -582,6 +610,8 @@ DEPENDENCIES:
   - MaterialComponents/ActivityIndicator
   - MaterialComponents/Buttons
   - MaterialComponents/Dialogs
+  - MaterialComponents/List
+  - "MaterialComponents/List+Theming"
   - MaterialComponents/ProgressView
   - MaterialComponents/TextFields
   - RxBinding
@@ -725,6 +755,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: eefb2f14e59380393148504b4b87a6822964dac1
+PODFILE CHECKSUM: 7e50979477e12fe94b676d0df7e4e63c6516d2b9
 
 COCOAPODS: 1.8.4

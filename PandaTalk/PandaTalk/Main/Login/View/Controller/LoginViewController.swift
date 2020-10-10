@@ -144,8 +144,8 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         if isSignUpFlow {
         self.viewModel.canSignUpSubject
           .takeWhile { $0 == true }
-          .bind { bool in
-            if bool {
+          .bind {
+            if $0 {
               print("didTapSignUpButton() is run in LoginVC")
               self.viewModel.didTapSignUpButton()
             }

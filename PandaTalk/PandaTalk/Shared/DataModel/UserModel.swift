@@ -18,4 +18,6 @@ struct UserModel {
   
   let userEmail = BehaviorSubject<String?>(value: nil)
   let uid = BehaviorSubject<String?>(value: nil)
+  
+  let currentUser = PublishSubject<CurrentUser>()
 }

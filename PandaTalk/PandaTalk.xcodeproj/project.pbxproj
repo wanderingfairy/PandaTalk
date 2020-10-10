@@ -22,6 +22,7 @@
 		15193076252E164900199B7B /* FriendsListFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15193070252E164900199B7B /* FriendsListFlow.swift */; };
 		1519307E252E17AB00199B7B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1519307D252E17AB00199B7B /* UIView+Extension.swift */; };
 		151930D42531AB0900199B7B /* FriendsCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151930D32531AB0900199B7B /* FriendsCardViewController.swift */; };
+		151930D92531ACF800199B7B /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151930D82531ACF800199B7B /* FriendsCell.swift */; };
 		15712F0B2521EBC300C08F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15712F0A2521EBC300C08F74 /* AppDelegate.swift */; };
 		15712F142521EBC400C08F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15712F132521EBC400C08F74 /* Assets.xcassets */; };
 		15712F172521EBC400C08F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15712F152521EBC400C08F74 /* LaunchScreen.storyboard */; };
@@ -87,6 +88,7 @@
 		1519307D252E17AB00199B7B /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		15193082252E17DA00199B7B /* PandaTalk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PandaTalk-Bridging-Header.h"; sourceTree = "<group>"; };
 		151930D32531AB0900199B7B /* FriendsCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCardViewController.swift; sourceTree = "<group>"; };
+		151930D82531ACF800199B7B /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
 		15712F072521EBC300C08F74 /* PandaTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandaTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15712F0A2521EBC300C08F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15712F132521EBC400C08F74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -209,6 +211,14 @@
 				15193070252E164900199B7B /* FriendsListFlow.swift */,
 			);
 			path = Flow;
+			sourceTree = "<group>";
+		};
+		151930E02531ACFD00199B7B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				151930D82531ACF800199B7B /* FriendsCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		15712EFE2521EBC300C08F74 = {
@@ -407,6 +417,7 @@
 		15712FD12521FA5F00C08F74 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				151930E02531ACFD00199B7B /* Cells */,
 				15712FDC2521FAC400C08F74 /* Controller */,
 			);
 			path = View;
@@ -853,6 +864,7 @@
 				15193071252E164900199B7B /* LoginFlow.swift in Sources */,
 				15712F0B2521EBC300C08F74 /* AppDelegate.swift in Sources */,
 				15712F812521F72100C08F74 /* ChatListViewController.swift in Sources */,
+				151930D92531ACF800199B7B /* FriendsCell.swift in Sources */,
 				15192DEC252B8B3600199B7B /* UserModel.swift in Sources */,
 				15712F902521F74100C08F74 /* SettingViewController.swift in Sources */,
 				1519307E252E17AB00199B7B /* UIView+Extension.swift in Sources */,
